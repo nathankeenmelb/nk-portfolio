@@ -1,0 +1,219 @@
+//- FUNCTIONS
+//- ====================================================
+mixin articleintro(link, name, subtitle)
+	section
+		h2.anchor&attributes({'id': link})= name
+		p.text-muted= subtitle
+		.row
+			if block
+				block
+mixin articleimage(header,src,alt,caption)
+	.col-md-6
+		.card
+			.card-header= header
+			figure
+				img.card-img-top(src=src alt=alt)
+				.card-body
+					figcaption
+						p.card-text= caption
+mixin image(href,alt,caption)
+	figure
+		img.img-fluid.mx-auto.d-block(src=href,alt=alt)
+		figcaption.figure-caption.text-center= caption
+
+//- CONTENT
+//- ====================================================
+.container
+	header
+		h1 How I built the Red Cup Cafe website
+	+articleintro("Neg",'Negotiation','How the project started')
+		.col-md-6
+			p I approached the client having worked with him before and he was happy to start a redesign.
+			p "I need a website" is the common request, but that results in poor websites.
+			p If I missed the strategic stage, the client would have missed out on several 5-6 figure opportunities.
+			p Hat tip to <a href="https://doubleyourfreelancing.com/rate/">Brennan Dunn, author of "Double Your Freelancing Rate"</a> for this planning process.
+		+articleimage('Red Cup Cafe','http://via.placeholder.com/350x150','',"Stuff.")
+	.row.justify-content-center
+		.col-md-10
+			h4 My strategy process
+			h5 1. "Why you're here"
+			p Here, I utilise my introversion to listen well to their problems, difficulties and frustrations. I try to map them to actual lost revenue or opportunities.
+			p I quantify these problems, in money lost per year. 
+			p For example, a very rough estimate of the number of people lost because they didn't want to wait in line was:
+			ul
+				li Lost revenue: 100 orders/week x $8/average order cost x 52 weeks = $41,600/year
+			p Now, the numbers are estimates. If the owner knew the number more intimately, and new the actual average order cost was more like $15, then that's about double, or $80,000. I didn't need to know the exact amounts.
+			h5 2. "Where you want to be"
+			p Next, we cast the utopia. The goals. The broad picture of where they want to be without much detail. 
+			p Without this stage, we're potentially fixing the symptoms, rather than the actual problems. We're also potentially limiting ourselves to a narrow subset of solutions.
+			p Crucially, I uncovered the need to look to what customers are now calling for - using their phones to pre-order. This is more than what the owner envisioned, but would be crucial to overcoming a key problem: people being turned away because of long lines. 
+			h5 3. "What we want to do"
+			p This is where I outline the broad solution.
+			p For this project, I researched and created several user scenarios. This painted the 'before' picture and the 'after'.
+			p I outlined what a website could do for them, as well as the need for an app to pre-order. (This also required a few other needs which I will not detail.)
+			h5 4. "What risks we'll minimise"
+			p This section outlines some potential problems. 
+			p It's helpful to document for the business owner, to know that you know about these pitfalls. It's also helpful for you, to build them into your costs and be accountable for them.
+			h5 5. "Why we're the best for the project"
+			p This is a pretty standard 'why us' section.
+			p So why me?
+			p I had:
+			+quote('we connect the big picture so you get a return on investment')
+			p So I work out their goals so we can focus on them, rather than including every feature or never getting the solution off the ground.
+			+quote('fundamentally better solutions, not just micro improvements')
+			p I operate through holistic thinking, as best summarised by Henry Ford:
+				+image('images/ux-portfolio/ford.jpg',"If I had asked people what they wanted, they would have said: faster horses - Henry Ford","In other words, you need think outside the box. People wanted to get places faster, but they couldn't see past their current systems.")
+			h5 6. "How we can do this for you"
+			p This is where I put the offer, with features and benefits and the cost with the expected return on investment. 
+			h5 7. "How we can keep each other up to date"
+			p This sets out communication and reporting needs.
+			h5 What else helped?
+			p In this case, despite agreeing my proposal made sense from a business point of view, it helped that I turned the question around and ask "what would you be willing to spend?".
+			p Having been at an impasse because the proposal was too high, we agreed to a compromise and went from an off-the-shelf template instead of a custom one. 
+	+articleintro("UX",'User Experience Planning','')
+		.col-md-6
+			p Much of the planning was done during the negotiation phase. You can't decide on a plan before understanding what the customers actually want, after all.
+			p From a UX perspective, I built user personas, gathered customer feedback, considered a few user scenarios, and mapped out possible features for each user scenario.
+			p From a wider view, I also enquired about his other systems such as POS, marketing and general processes. That was helpful for thinking through integration needs or possible scope/requirements deficiencies.
+		+articleimage('Red Cup Cafe','http://via.placeholder.com/350x150','',"Stuff.")
+	.row.justify-content-center
+		.col-md-10
+			h4 The target audience
+			p Of course, every business wants to cater to 'everyone'. But I drew a mind map to first build a large list of possible 'drawing cards' for this cafe. 
+			p Broadly speaking, gurus break a target audience down into two main categories: demographics (age, location, income-level, and so on), and psychographics (interests, behaviours, and so on).
+			+image('images/ux-portfolio/redcup-target-audience.png',"Some of the psychographic data I put together - cosy, highly sensory, strong visuals, my go-to-place for relaxing. This is in a mind map","This is some of the psychographic data I pulled from customer reviews, the owner, and other research.")
+			p Apart from demographics, I also did section on 'target audience by time'. This was because the cafe had a considerable time range from early morning right through to late night. 
+			+image('images/ux-portfolio/redcup-target-audience-time.png',"Some of the demographic data I put together from different time bands - lunch, dinner and friday nights","The different audiences by time included morning, breakfast, lunch, dinner, friday night (live music), weekends and morning/afternoon.")
+			h4 User personas
+			p From this information I was able to build a rough set of user personas. 
+			p The following is demographic and psychographic details of 'Eric the electrician', one of our five personas. 
+			+image('images/ux-portfolio/redcup-persona-eric.png',"Persona information about a local electrician","This was created using Xtensio")
+			p This shows 'Eric the electrician', while others were: 'Amy the asian' (a high percentage of Box Hill is Asian), 'Susie the student' (multiple schools nearby), 'Bill the businessman', 'Barbie the young adult'.
+			h4 User Scenarios / Customer Journeys
+			p From the personas I put together some user scenarios.
+			+image('images/ux-portfolio/redcup-user-scenarios.png',"An example of a user scenario with the old and the new, with the solution in place.","This scenario depended on the full solution, not just the website (the only part done to date)")
+			p The purpose of this exercise is to uncover the full range of touchpoints, emotions, and customer experiences surrounding the product. 
+			p I gained a better appreciation around the following questions: why do they get coffee? What do they want out of it? Is speed important? Is the taste important? What is important?
+			p The importance and convenience of an app seriously came to the forefront through this. 
+			p With an app, I discovered you could:
+			ul
+				li Deliver on speed for those in a rush
+				li Relax with friends for longer
+				li Reduce staff time (customers can order & pay themselves)
+				li Increase satisfaction for customers who feel more in control of their order
+				li Increase repeat customers (push notifications; a quick 'repeat' order button)
+			p These were clearly going to improve the experience much more than a website could. 
+			h4 Solution finding
+			p Now, with a far better understanding of the whole picture, I could come up with a creative solution. 
+			p A website wasn't what customers were really going to benefit from: some kind of preordering app would be necessary. 
+			p However, this app would have to integrate with their POS (the money machine at the counter & EFTPOS), which was too old. A new POS was necessary. 
+			p As this hasn't been implemented yet, I can't give too many details!
+			p Here's my process, though:
+			ol
+				li Gather needs from: all relevant people at the business; technical environment; types of customers; probable future requirements; and so on
+				li Research the available systems
+				li Analyse key options, not going further if they don't meet critical needs
+				li Rate key options' features, if necessary, to pick one from multiple options
+	+articleintro("Proto",'Prototyping','The quick draft version')
+		.col-md-6
+			p As we had a very tight budget, we did the prototyping in the CMS  we would use in the live site, Joomla.
+			p Joomla was chosen over WordPress for it's better structure, better security, and depth of knowledge with available team members.
+			p WordPress can deliver a better experience from its ease of use, but the client was not needing to update the site much. As to the front-end, people often relate to me: 'wow this looks like a WordPress site!'. 
+			p But while Joomla's limitations with ease of use can be overcome, WordPress can't easily overcome its security and structural issues.
+			p I gave a link to the hi-fi prototype to some testers for qualititative review.  
+		+articleimage('The starting point','images/ux-portfolio/redcup-ja_mono.jpg','The chosen template, JA Mono, by JoomlArt',"The chosen template, my starting point.")
+	.row.justify-content-center
+		.col-md-10
+			h4 The template setup
+			p Due to the compromise due to a low budget, I had to use a template. I chose the template using the earlier research, summarised to 'unique', 'authentic', 'on trend' and 'an escape'. 
+			p But this meant I could install a fully functional Joomla website, with that template, in a few minutes. 
+			p Then it was a matter of getting rid of elements not needed, and changing the content. 
+			h4 Rapid prototyping
+			//- Was there a lo-fi prototype e.g. paper version? Can't remember. Do look.
+			p I wanted to make 
+			h4 Graphic design & how I doubled the value in the same time
+			p Part of the distinctiveness of the cafe is mixing the old and the new. I wanted some pixel-art as a throwback to the 80's style of games like Minecraft has done so well. 
+			+quote('That would easily take 50 hours. 45 of which I did not have.')
+			p So I had the thought of producing some isometric art or pixelated icons. A view of the cafe for those booking would be handy, and not just eye candy. 
+			p But that would easily take 50 hours. 45 of which I did not have. 
+			p I decided to see whether an overseas freelancer (I used Upwork) had the skills and a low cost of living. 
+			p This is my sketch I gave them to look at, plus a finished piece from a stock site:
+			//- Insert sketch of cafe, i.e. +image
+			p Well, I was blown away! I had a large selection of highly skilled graphic artists, within a good pricing point (a few hundred dollars). Easily ten times less than what I could have done it for.
+			p I worked with them closely in parallel to my other work. It only took 5-15 minutes every couple of days for a couple of weeks to manage this. 
+			//- Insert final image
+			p Offsetting the items on the home page wasn't fitting, so I ended up putting the sketches on the homepage. This also filled in the blank squares, which was handy. 
+			p When you look at the <a href="http://redcup.com.au/book" title="Red Cup Cafe - book">final implementation</a>, you'll notice on small screens (which would be 80%+ of the readership) you can zoom into the picture. 
+			p The zoom was a technique I learned from Shopify websites, which customers crave (you can't touch or feel products on a website, so any extra detail is helpful).
+			h4 Qualitative testing
+			p Once I was happy with the basic look and feel of the site, and the content, I wanted some testing. 
+			p I realise you want to test your actual customers, or as close as possible. That was going to be expensive. I used Upwork again, knowing I could get 10-20 minute video responses for about $10-$20 each. 
+			p I opted for some fairly basic parameters, knowing that the cheaper people would probably be overseas. I asked for those with experience of Australian culture. 
+			p In order to cut poor quality responses, I informed applicants they needed to be familiar with the 'UserTesting - Example of a 5 star test' videos (they could search YouTube for those). 
+			p I chose several questions that I took from UserTesting and other sites. If you like, <a href="#testingquestions" data-toggle="collapse" aria-expanded="false" aria-controls="testingquestions">you can view the questions now [open]</a>.
+			.collapse#testingquestions
+				ol 
+					li Having spent perhaps 5-10 seconds only on the site, what are your first impressions - would you go there?
+					li What, if anything, helps this company stand out from its competitors? Explain your answer.
+					li Go to the menu and choose what you would like to have. Explain your choice. 
+					li Who do you think would be interested in this cafe - the sorts of people (target audience)?
+					li You want to find some reviews about the place. Look some up and talk about how that influences your decision.
+					li You've decided you want to go, now see if you can find your way there from your home/business at 2 Selwyn St, Blackburn VIC 3130 (or if you've chosen 'student' -- school: Box Hill High School, 1180 Whitehorse Rd, Box Hill VIC 3128)
+					li You forgot to check the opening times. It's now 4pm on a Tuesday: do you have time to go there?
+					li What frustrations did you have about the website?
+					li If you could add or remove anything, what would you do to improve the site? 
+					li What was nice about the site, did anything put a smile on your face?
+					li How likely would you go there? 
+						ul(start="0")
+							li 0 Not at all likely
+							li 1 Unlikely
+							li 2 Possibly
+							li 3 Likely
+							li 4 Highly likely
+				//- Not actually useful ======== p <a href="#testingquestions" data-toggle="collapse" aria-expanded="false" aria-controls="testingquestions">[close]</a>
+			p I was surprised at the depth and quality of the responses I got. It's amazing how close you get and how easily you can rationalise to yourself 'oh that'll be fine'. 
+			p The changes we made as a result of the testing:
+			ol
+				li The booking page was basically 'phone us', which wasn't simple. To encourage more function bookings, we added a form. 
+				li Links to the address/map weren't working for iPhones, so I changed it to <code>http://maps.apple.com/...</code>, which still works on Android (yes, opens in Google Maps).
+				li The opening hours were listed at an angle, which gave it a unique look, but were too hard to read. In consultation with the client, I changed it to my other idea, of using night and sun icons to add uniqueness. This also conveys the closing times. 
+				li Totally changed the menu system, which on mobiles slid out from the side ('offcanvas') but at a grand total of 4 items, was totally unnecessary. 
+				li A couple of template/CSS-related issues.
+				li The Facebook feed was simply unnecessary. A link to the page was all that was needed.
+			p I got positive feedback about a lot of things, of course. For example, the visuals and the submenu on the 'menu' page (which uses Bootstrap's scrollspy for the subsections. 
+	+articleintro("End",'Finalising','Optimising, securing, making final changes.')
+		.col-md-6
+			p At this stage I bedded down on details.
+			p Given this was on a fully-fledged CMS, attention to reducing speed was a huge need.
+			p Security issues were standard Joomla-specific steps, so I won't detail them here.
+			p Responsive work was incredibly important given probably 80% of people would be viewing from their mobiles. 
+		+articleimage('Speed testing','images/ux-portfolio/redcup-speed-optimising.png','Speed optimising results at a point in time',"Speed test results by GTmetrix at a point in time.")
+	.row.justify-content-center
+		.col-md-10
+			h4 Speed Optimising
+			p I used Pingdom, GTmetrix, and Chrome's developer tools to work out speed bottlenecks and optimise the site.
+			p Images were optimised using optimizilla.
+			p Javascript was inserted only on the relevant pages, and deferred if possible. I learned about what defer and async actually mean:
+			+image('images/ux-portfolio/redcup-javascript.jpg',"The difference between normal execution of JavaScript, deferred and asynchronous execution","The difference between normal execution of JavaScript, deferred and asynchronous execution")
+			p Other work included ETags, setup of a Content Delivery Network, Caching, GZipping, minifying/uglifying and combining CSS & JavaScript, amongst other things.
+			h4 Responsive Optimising
+			p The menus had to be extensively tested and tweaked for different screen sizes. 
+			p Out-of-the-box, the template only provided for an off-canvas menu for mobile. This is misplaced for the hand, which is usually situated at the bottom of the phone. It's also an extra (unnecessary) step to tap on the 'hamburger' lines <i class="fas fa-bars"></i> (is that really a known 'convention' by the audience?) and <em>then</em> one of the 4 options.
+			p The buttons now bunch up tighter on small screens, and also change position to the left on when the phone is turned sideways. 
+			+image('images/ux-portfolio/redcup-menu-horiz-and-vertical.jpg',"The menu is on the bottom when the mobile is vertical, and on the left when viewed horizontally","The menu is on the bottom when the mobile is vertical, and on the left when viewed horizontally")
+			p The sub-navigation on the menu page also had to bunch up on smaller screens.
+			p I brought in an abbreviation, and rotated the text to make it fit nicely on smaller screens. It kept going to 2 lines so I ended up using the abbreviation on all except the largest screens. 
+			p Unfortunately, it seems there is a limit with CSS in that items rotated keep the width of the un-rotated element. I had to change the styling to get rid of the background-color for this reason. 
+			//- +image here for this (make it really easy)
+			h4 Live!
+			p We were very pleased with this site, and it was a pleasure working with the client. 
+			p If you haven't already, do view it and go there! <a href="http://www.redcup.com.au">www.redcup.com.au</a>.
+//- BOTTOM NAV
+//- ====================================================
+nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
+		ul.navbar-nav
+			+navli('#top',"Top")
+			+navli('#Neg',"Neg'n")
+			+navli('#UX',"UX")
+			+navli('#Proto',"Proto")
+			+navli('#End',"Final")

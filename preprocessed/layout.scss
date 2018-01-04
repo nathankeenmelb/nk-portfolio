@@ -1,0 +1,79 @@
+/* Nav settings  */
+body { //if fixed to top, move the body down
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  position: relative;
+}
+/*
+@media (max-width: 576px) { //on mobiles, fix nav to bottom
+  .fixed-top {
+  top: initial;
+  bottom: 0;
+  }
+  body {
+  padding-top: 0;
+  }
+}
+*/
+section {
+    padding: 2em 0;
+}
+.card-header figure {
+	margin: 0;
+}
+footer {
+	margin-top: 4rem;
+	.jumbotron {
+		margin-bottom:0;
+		background-color:inherit;
+	}
+}
+a[href^="http://"]:after, a[href^="https://"]:after { 
+	display:none;
+	font-family: "Font Awesome 5 Solid";
+	content:"\f35d";
+}
+.anchor {
+    padding-top: 4rem;
+}
+.fa-external-link-alt {
+    margin-left:3px;
+}
+// Star Ratings
+/*div.skills {
+	margin: 2rem;
+}*/
+
+$table-star-width: 100%;
+
+table#stars {
+	max-width: $table-star-width;
+	margin: 0 auto;
+	td:nth-child(1) {
+		width: 20%;
+		min-width: 200px;
+	}
+	td:nth-child(2) {
+		max-width:120px;
+		text-align:center;
+	}
+	td:nth-child(3) {
+		max-width:150px;
+		text-align:center;
+	}
+	td:nth-child(4) {
+		min-width: 250px;
+	}
+	.badge {
+		white-space: initial;
+	}
+}
+// Articles
+.fa-quote-left {
+    margin-right: 10px;
+}
+
+// Navigation
+#navbot .navbar-nav {
+	margin: 0 auto;
+}

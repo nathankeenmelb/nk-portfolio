@@ -1,0 +1,30 @@
+//- FUNCTIONS
+//- ====================================================
+mixin navli(url, name)
+	li.nav-item
+		a.nav-link(href=url)= name
+			if block
+				block
+mixin navlidropup(url, name, id)
+	li.nav-item.dropdown
+		a.nav-link.dropdown-toggle(href=url,id=id,data-toggle="dropdown",aria-haspopup="true",aria-expanded="false")= name
+		.dropdown-menu(aria-labelledby=id)
+			if block
+				block
+mixin nava(url, name)
+	a(href=url)&attributes(attributes)= name
+mixin quote(text)
+	blockquote.blockquote
+		i.fas.fa-quote-left
+		= text
+//- HTML
+//- ====================================================
+doctype html
+html
+	head
+		title Portfolio of Nathan Keen
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb",crossorigin="anonymous")
+		link(rel="stylesheet",href="css/layout.css")
+body#top(data-spy="scroll",data-target="#navbot",data-offset="0") 

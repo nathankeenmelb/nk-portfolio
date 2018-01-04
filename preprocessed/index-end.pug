@@ -1,0 +1,31 @@
+//- FOOTER
+//- ====================================================
+footer(style="background-color:#ccc;")
+	.container
+		.jumbotron
+			.row
+				.col-sm-6
+					ul.nav.flex-column
+						h4
+							+navli('#',"Tech Skills")(class="navfooter")
+						+navli('#',"UI")(class="navfooter")
+						+navli('#',"UX")(class="navfooter")
+						+navli('#',"PM")(class="navfooter")
+						h4
+							+navli('#',"Soft Skills")(class="navfooter")
+						+navli('#',"Team")(class="navfooter")
+						+navli('#',"Conflict Resolution")(class="navfooter")
+				.col-sm-6
+					h4 Contact Nathan
+					p Phone: <a href="tel:+61405990801">0405 990 801</a>
+					p Email: <a href="javascript:location='mailto:\u006e\u0061\u0074\u0068\u0061\u006e\u002e\u006b\u0031\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"><script type="text/javascript">document.write('\u006e\u0061\u0074\u0068\u0061\u006e\u002e\u006b\u0031\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script></a>
+					p LinkedIn: <a href="https://www.linkedin.com/in/nathankeenmelbourne/">linkedin.com/in/nathankeenmelbourne/</a>
+//- JAVASCRIPT BEFORE BODY CLOSES
+//- ====================================================
+script FontAwesomeConfig = { searchPseudoElements: true };
+script(defer,src="https://use.fontawesome.com/releases/v5.0.2/js/all.js")
+script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js",integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN",crossorigin="anonymous")
+//- Popper needed for Bootstrap dropdowns, tooltips and popovers
+script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js",integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh",crossorigin="anonymous")
+//- Bootstrap needed for Alerts, Buttons, Carousel, Collapse, Dropdowns, Modals, Navbar, Tooltips, Scrollspy
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js",integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ",crossorigin="anonymous")

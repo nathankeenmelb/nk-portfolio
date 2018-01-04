@@ -1,0 +1,65 @@
+/* Nav settings  */
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  position: relative; }
+
+/*
+@media (max-width: 576px) { //on mobiles, fix nav to bottom
+  .fixed-top {
+  top: initial;
+  bottom: 0;
+  }
+  body {
+  padding-top: 0;
+  }
+}
+*/
+section {
+  padding: 2em 0; }
+
+.card-header figure {
+  margin: 0; }
+
+footer {
+  margin-top: 4rem; }
+  footer .jumbotron {
+    margin-bottom: 0;
+    background-color: inherit; }
+
+a[href^="http://"]:after, a[href^="https://"]:after {
+  display: none;
+  font-family: "Font Awesome 5 Solid";
+  content: "\f35d"; }
+
+.anchor {
+  padding-top: 4rem; }
+
+.fa-external-link-alt {
+  margin-left: 3px; }
+
+/*div.skills {
+	margin: 2rem;
+}*/
+table#stars {
+  max-width: 100%;
+  margin: 0 auto; }
+  table#stars td:nth-child(1) {
+    width: 20%;
+    min-width: 200px; }
+  table#stars td:nth-child(2) {
+    max-width: 120px;
+    text-align: center; }
+  table#stars td:nth-child(3) {
+    max-width: 150px;
+    text-align: center; }
+  table#stars td:nth-child(4) {
+    min-width: 250px; }
+  table#stars .badge {
+    white-space: initial; }
+
+.fa-quote-left {
+  margin-right: 10px; }
+
+#navbot .navbar-nav {
+  margin: 0 auto; }

@@ -1,0 +1,21 @@
+//- TOP NAV
+//- ====================================================
+nav.navbar.navbar-expand.navbar-dark.fixed-top.bg-dark#navtop
+	button.navbar-toggler(type="button",data-toggle="collapse",data-target="#navbarCollapse",aria-controls="navbarCollapse",aria-expanded="false",aria-label="Toggle navigation")
+		span.navbar-toggler-icon
+	div#navbarCollapse.collapse.navbar-collapse
+		ul.navbar-nav.mr-auto
+			+navli('/',"Home")
+			//-+navlidropup('#','#','dropup1')
+				//-+nava('/#UI',"UI")(class="dropdown-item")
+				//-+nava('/#UX',"UX")(class="dropdown-item")
+				//-+nava('/#PM',"PM")(class="dropdown-item")
+				//-+nava('/#Web',"Web")(class="dropdown-item")
+				//-li.nav-item.dropdown
+				//-a.nav-link.dropdown-toggle(href="#",id="homedrop",data-toggle="dropdown",aria-haspopup="true",aria-expanded="false")
+					//-i.fas.fa-home
+				//-.dropdown-menu(aria-labelledby="homedrop")
+			+navlidropup('#','Portfolio','dropup2')
+				+nava('/portfolio-RedCupCafe2017.html',"Red Cup Cafe 2017")(class="dropdown-item")
+			//- +navli('https://www.linkedin.com/in/nathankeenmelbourne/','Work XP')
+		span.badge.badge-warning Beta
