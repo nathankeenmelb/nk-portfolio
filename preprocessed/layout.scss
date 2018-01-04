@@ -21,6 +21,10 @@ section {
 .card-header figure {
 	margin: 0;
 }
+.card {
+	margin: 1rem 0;
+}
+
 footer {
 	margin-top: 4rem;
 	.jumbotron {
@@ -39,6 +43,7 @@ a[href^="http://"]:after, a[href^="https://"]:after {
 .fa-external-link-alt {
     margin-left:3px;
 }
+
 // Star Ratings
 /*div.skills {
 	margin: 2rem;
@@ -54,7 +59,7 @@ table#stars {
 		min-width: 200px;
 	}
 	td:nth-child(2) {
-		max-width:120px;
+		min-width:120px;
 		text-align:center;
 	}
 	td:nth-child(3) {
@@ -63,11 +68,37 @@ table#stars {
 	}
 	td:nth-child(4) {
 		min-width: 250px;
+		white-space: nowrap;
 	}
 	.badge {
-		white-space: initial;
+		//white-space: initial;
 	}
 }
+
+.table-responsive {
+	/* Scrolling shadows by @kizmarh and @leaverou */
+    background-image: 
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, white, white),
+    linear-gradient(to right, rgba(0,0,0,.25), rgba(255,255,255,0)),
+    linear-gradient(to left, rgba(0,0,0,.25), rgba(255,255,255,0));   
+	background-position: left center, right center, left center, right center;
+	background-repeat: no-repeat;
+	background-color: white;
+	background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+	/* Opera doesn't support this in the shorthand */
+	background-attachment: local, local, scroll, scroll;
+}
+
+//Hide the explanation column on smaller screens
+@media (max-width: 750px) {
+ table#stars {
+	td:nth-child(3) {
+		display:none;
+	}
+ }
+}
+
 // Articles
 .fa-quote-left {
     margin-right: 10px;

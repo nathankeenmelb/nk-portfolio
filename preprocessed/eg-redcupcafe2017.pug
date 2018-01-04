@@ -34,7 +34,7 @@ mixin image(href,alt,caption)
 			p Hat tip to <a href="https://doubleyourfreelancing.com/rate/">Brennan Dunn, author of "Double Your Freelancing Rate"</a> for this planning process.
 		+articleimage('Red Cup Cafe','http://via.placeholder.com/350x150','',"Stuff.")
 	.row.justify-content-center
-		.col-md-10
+		.col-md-10.col-xl-8
 			h4 My strategy process
 			h5 1. "Why you're here"
 			p Here, I utilise my introversion to listen well to their problems, difficulties and frustrations. I try to map them to actual lost revenue or opportunities.
@@ -43,6 +43,23 @@ mixin image(href,alt,caption)
 			ul
 				li Lost revenue: 100 orders/week x $8/average order cost x 52 weeks = $41,600/year
 			p Now, the numbers are estimates. If the owner knew the number more intimately, and new the actual average order cost was more like $15, then that's about double, or $80,000. I didn't need to know the exact amounts.
+			p I also try to use stats where possible. This one shows simply adding online ordering is worth a lot:
+			+image('images/ux-portfolio/redcup-ecommerce.png',"eCommerce trends in Australia from 2012-2016, indicating eCommerce made up 7% of all retail sales in Australia in 2016","7% of all retail sales were online in 2016")
+			p Then, let's calculate for them:
+			.form-inline#code-ecommerce2
+				label.mr-2(for="quantity-ecommerce2") Total yearly revenue: 
+				.input-group
+					.input-group-addon.my-2 $
+					input.form-control.my-2(type="text",style="width: 125px;",name="quantity",id="quantity-ecommerce2",value="1000000")
+				.input-group
+					label.mx-2(for="item_price-ecommerce2") Increase:
+					input.form-control.my-2(type="text",style="width: 75px;",name="item_price",id="item_price-ecommerce2",value="7")
+					.input-group-addon.my-2 %
+				.input-group
+					label.mr-2(for="total_price-ecommerce2") Revenue increase:
+					.input-group-addon.my-2 $
+					input.form-control.my-2(type="text",style="width: 100px;",name="total_price",id="total_price-ecommerce2",value="70000",readonly="")
+			p You can change the numbers to match your revenue.
 			h5 2. "Where you want to be"
 			p Next, we cast the utopia. The goals. The broad picture of where they want to be without much detail. 
 			p Without this stage, we're potentially fixing the symptoms, rather than the actual problems. We're also potentially limiting ourselves to a narrow subset of solutions.
@@ -77,7 +94,7 @@ mixin image(href,alt,caption)
 			p From a wider view, I also enquired about his other systems such as POS, marketing and general processes. That was helpful for thinking through integration needs or possible scope/requirements deficiencies.
 		+articleimage('Red Cup Cafe','http://via.placeholder.com/350x150','',"Stuff.")
 	.row.justify-content-center
-		.col-md-10
+		.col-md-10.col-xl-8
 			h4 The target audience
 			p Of course, every business wants to cater to 'everyone'. But I drew a mind map to first build a large list of possible 'drawing cards' for this cafe. 
 			p Broadly speaking, gurus break a target audience down into two main categories: demographics (age, location, income-level, and so on), and psychographics (interests, behaviours, and so on).
@@ -123,25 +140,38 @@ mixin image(href,alt,caption)
 			p I gave a link to the hi-fi prototype to some testers for qualititative review.  
 		+articleimage('The starting point','images/ux-portfolio/redcup-ja_mono.jpg','The chosen template, JA Mono, by JoomlArt',"The chosen template, my starting point.")
 	.row.justify-content-center
-		.col-md-10
+		.col-md-10.col-xl-8
 			h4 The template setup
 			p Due to the compromise due to a low budget, I had to use a template. I chose the template using the earlier research, summarised to 'unique', 'authentic', 'on trend' and 'an escape'. 
 			p But this meant I could install a fully functional Joomla website, with that template, in a few minutes. 
 			p Then it was a matter of getting rid of elements not needed, and changing the content. 
-			h4 Rapid prototyping
+			h4 Lo-fi rapid prototyping
 			//- Was there a lo-fi prototype e.g. paper version? Can't remember. Do look.
-			p I wanted to make 
-			h4 Graphic design & how I doubled the value in the same time
+			p I had an early idea of using a mascot to lighten up the tone of the website, but the client didn't like this. Partly, I think this was because I wasn't able to confidently describe the value that a mascot could bring.
+			+image('images/ux-portfolio/redcup-prototypes-2.jpg',"An early drawing of a dog as a mascot","An early drawing of a dog as a mascot")
+			p The idea also incorported an element of fun choice: "choose you dog", with the mascot tweaked in various ways for the different types of foods.
+			p I enjoy quickly sketching different layout ideas on paper - it's freedom allows me to match the speed of my brain's creativity. Generally, I've found digital tools can't match paper for the lo-fi stage.
+			+image('images/ux-portfolio/redcup-prototypes-1.jpg',"Quick sketches of home page and other page layouts","Quick sketches of home page and other page layouts")
+			p Invariably, only parts of it made it to the hi-fi prototype stage, but that's part of the creative process.
+			p For example, I envisioned customer reviews to be a prime part of the home page. But testing (see below) revealed the pictures were the motivating (mouth-watering).
+			h4 Hi-fi prototyping
+			p Lo-fi prototyping helped to rapidly discard bad choices. It also helps to reduce the my mental energy (cognitive load), aka a 'brain dump'. 
+			p Your brain has limited RAM, it seems.
+			p In Joomla, I needed to make a lot of little CSS changes.
+			p It's easy to edit the CSS via Chrome's inspect tool, change the CSS on-the-fly, then when you get it right, copy that into the css file. 
+			p For example, I didn't want users to have to work out what the images were about (by scrolling over it). Why make them think? So I made the text's <code>opacity: initial</code> rather than 0, and added <code>background-color: black</code> for extra clarity.
+			+image('images/ux-portfolio/redcup-prototypes-hi1.jpg',"The new title shows all the time, and has a black background to show the white with high contrast","The new title shows all the time, and has a black background for clarity")
+			h4 Graphic design & how I doubled the value
 			p Part of the distinctiveness of the cafe is mixing the old and the new. I wanted some pixel-art as a throwback to the 80's style of games like Minecraft has done so well. 
 			+quote('That would easily take 50 hours. 45 of which I did not have.')
 			p So I had the thought of producing some isometric art or pixelated icons. A view of the cafe for those booking would be handy, and not just eye candy. 
 			p But that would easily take 50 hours. 45 of which I did not have. 
 			p I decided to see whether an overseas freelancer (I used Upwork) had the skills and a low cost of living. 
-			p This is my sketch I gave them to look at, plus a finished piece from a stock site:
-			//- Insert sketch of cafe, i.e. +image
+			p This is my sketch I gave them to look at, plus actual photos, and a stock picture with the isometric look I wanted:
+			+image('images/ux-portfolio/redcup-isometric1.jpg',"A pencil sketch of an inside cutaway of the cafe","A quick sketch for the freelancer, given together with photos")
 			p Well, I was blown away! I had a large selection of highly skilled graphic artists, within a good pricing point (a few hundred dollars). Easily ten times less than what I could have done it for.
 			p I worked with them closely in parallel to my other work. It only took 5-15 minutes every couple of days for a couple of weeks to manage this. 
-			//- Insert final image
+			+image('images/ux-portfolio/redcup-isometric2.jpg',"A complete isometric cutaway of the inside of the cafe","The final inside drawing")
 			p Offsetting the items on the home page wasn't fitting, so I ended up putting the sketches on the homepage. This also filled in the blank squares, which was handy. 
 			p When you look at the <a href="http://redcup.com.au/book" title="Red Cup Cafe - book">final implementation</a>, you'll notice on small screens (which would be 80%+ of the readership) you can zoom into the picture. 
 			p The zoom was a technique I learned from Shopify websites, which customers crave (you can't touch or feel products on a website, so any extra detail is helpful).
@@ -189,7 +219,7 @@ mixin image(href,alt,caption)
 			p Responsive work was incredibly important given probably 80% of people would be viewing from their mobiles. 
 		+articleimage('Speed testing','images/ux-portfolio/redcup-speed-optimising.png','Speed optimising results at a point in time',"Speed test results by GTmetrix at a point in time.")
 	.row.justify-content-center
-		.col-md-10
+		.col-md-10.col-xl-8
 			h4 Speed Optimising
 			p I used Pingdom, GTmetrix, and Chrome's developer tools to work out speed bottlenecks and optimise the site.
 			p Images were optimised using optimizilla.

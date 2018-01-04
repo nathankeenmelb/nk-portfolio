@@ -38,7 +38,7 @@
         </div>
       </section>
     <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-10 col-xl-8">
         <h4>My strategy process</h4>
         <h5>1. "Why you're here"</h5>
         <p>Here, I utilise my introversion to listen well to their problems, difficulties and frustrations. I try to map them to actual lost revenue or opportunities.</p>
@@ -48,6 +48,29 @@
           <li>Lost revenue: 100 orders/week x $8/average order cost x 52 weeks = $41,600/year</li>
         </ul>
         <p>Now, the numbers are estimates. If the owner knew the number more intimately, and new the actual average order cost was more like $15, then that's about double, or $80,000. I didn't need to know the exact amounts.</p>
+        <p>I also try to use stats where possible. This one shows simply adding online ordering is worth a lot:</p>
+          <figure><img class="img-fluid mx-auto d-block" src="images/ux-portfolio/redcup-ecommerce.png" alt="eCommerce trends in Australia from 2012-2016, indicating eCommerce made up 7% of all retail sales in Australia in 2016">
+            <figcaption class="figure-caption text-center">7% of all retail sales were online in 2016</figcaption>
+          </figure>
+        <p>Then, let's calculate for them:</p>
+        <div class="form-inline" id="code-ecommerce2">
+          <label class="mr-2" for="quantity-ecommerce2">Total yearly revenue: </label>
+          <div class="input-group">
+            <div class="input-group-addon my-2">$</div>
+            <input class="form-control my-2" type="text" style="width: 125px;" name="quantity" id="quantity-ecommerce2" value="1000000">
+          </div>
+          <div class="input-group">
+            <label class="mx-2" for="item_price-ecommerce2">Increase:</label>
+            <input class="form-control my-2" type="text" style="width: 75px;" name="item_price" id="item_price-ecommerce2" value="7">
+            <div class="input-group-addon my-2">%</div>
+          </div>
+          <div class="input-group">
+            <label class="mr-2" for="total_price-ecommerce2">Revenue increase:</label>
+            <div class="input-group-addon my-2">$</div>
+            <input class="form-control my-2" type="text" style="width: 100px;" name="total_price" id="total_price-ecommerce2" value="70000" readonly="">
+          </div>
+        </div>
+        <p>You can change the numbers to match your revenue.</p>
         <h5>2. "Where you want to be"</h5>
         <p>Next, we cast the utopia. The goals. The broad picture of where they want to be without much detail. </p>
         <p>Without this stage, we're potentially fixing the symptoms, rather than the actual problems. We're also potentially limiting ourselves to a narrow subset of solutions.</p>
@@ -106,7 +129,7 @@
         </div>
       </section>
     <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-10 col-xl-8">
         <h4>The target audience</h4>
         <p>Of course, every business wants to cater to 'everyone'. But I drew a mind map to first build a large list of possible 'drawing cards' for this cafe. </p>
         <p>Broadly speaking, gurus break a target audience down into two main categories: demographics (age, location, income-level, and so on), and psychographics (interests, behaviours, and so on).</p>
@@ -181,23 +204,48 @@
         </div>
       </section>
     <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-10 col-xl-8">
         <h4>The template setup</h4>
         <p>Due to the compromise due to a low budget, I had to use a template. I chose the template using the earlier research, summarised to 'unique', 'authentic', 'on trend' and 'an escape'. </p>
         <p>But this meant I could install a fully functional Joomla website, with that template, in a few minutes. </p>
         <p>Then it was a matter of getting rid of elements not needed, and changing the content. </p>
-        <h4>Rapid prototyping</h4>
-        <p>I wanted to make </p>
-        <h4>Graphic design & how I doubled the value in the same time</h4>
+        <h4>Lo-fi rapid prototyping</h4>
+        <p>I had an early idea of using a mascot to lighten up the tone of the website, but the client didn't like this. Partly, I think this was because I wasn't able to confidently describe the value that a mascot could bring.</p>
+          <figure><img class="img-fluid mx-auto d-block" src="images/ux-portfolio/redcup-prototypes-2.jpg" alt="An early drawing of a dog as a mascot">
+            <figcaption class="figure-caption text-center">An early drawing of a dog as a mascot</figcaption>
+          </figure>
+        <p>The idea also incorported an element of fun choice: "choose you dog", with the mascot tweaked in various ways for the different types of foods.</p>
+        <p>I enjoy quickly sketching different layout ideas on paper - it's freedom allows me to match the speed of my brain's creativity. Generally, I've found digital tools can't match paper for the lo-fi stage.</p>
+          <figure><img class="img-fluid mx-auto d-block" src="images/ux-portfolio/redcup-prototypes-1.jpg" alt="Quick sketches of home page and other page layouts">
+            <figcaption class="figure-caption text-center">Quick sketches of home page and other page layouts</figcaption>
+          </figure>
+        <p>Invariably, only parts of it made it to the hi-fi prototype stage, but that's part of the creative process.</p>
+        <p>For example, I envisioned customer reviews to be a prime part of the home page. But testing (see below) revealed the pictures were the motivating (mouth-watering).</p>
+        <h4>Hi-fi prototyping</h4>
+        <p>Lo-fi prototyping helped to rapidly discard bad choices. It also helps to reduce the my mental energy (cognitive load), aka a 'brain dump'. </p>
+        <p>Your brain has limited RAM, it seems.</p>
+        <p>In Joomla, I needed to make a lot of little CSS changes.</p>
+        <p>It's easy to edit the CSS via Chrome's inspect tool, change the CSS on-the-fly, then when you get it right, copy that into the css file. </p>
+        <p>For example, I didn't want users to have to work out what the images were about (by scrolling over it). Why make them think? So I made the text's <code>opacity: initial</code> rather than 0, and added <code>background-color: black</code> for extra clarity.</p>
+          <figure><img class="img-fluid mx-auto d-block" src="images/ux-portfolio/redcup-prototypes-hi1.jpg" alt="The new title shows all the time, and has a black background to show the white with high contrast">
+            <figcaption class="figure-caption text-center">The new title shows all the time, and has a black background for clarity</figcaption>
+          </figure>
+        <h4>Graphic design & how I doubled the value</h4>
         <p>Part of the distinctiveness of the cafe is mixing the old and the new. I wanted some pixel-art as a throwback to the 80's style of games like Minecraft has done so well. </p>
         <blockquote class="blockquote"><i class="fas fa-quote-left"></i>That would easily take 50 hours. 45 of which I did not have.
         </blockquote>
         <p>So I had the thought of producing some isometric art or pixelated icons. A view of the cafe for those booking would be handy, and not just eye candy. </p>
         <p>But that would easily take 50 hours. 45 of which I did not have. </p>
         <p>I decided to see whether an overseas freelancer (I used Upwork) had the skills and a low cost of living. </p>
-        <p>This is my sketch I gave them to look at, plus a finished piece from a stock site:</p>
+        <p>This is my sketch I gave them to look at, plus actual photos, and a stock picture with the isometric look I wanted:</p>
+          <figure><img class="img-fluid mx-auto d-block" src="images/ux-portfolio/redcup-isometric1.jpg" alt="A pencil sketch of an inside cutaway of the cafe">
+            <figcaption class="figure-caption text-center">A quick sketch for the freelancer, given together with photos</figcaption>
+          </figure>
         <p>Well, I was blown away! I had a large selection of highly skilled graphic artists, within a good pricing point (a few hundred dollars). Easily ten times less than what I could have done it for.</p>
         <p>I worked with them closely in parallel to my other work. It only took 5-15 minutes every couple of days for a couple of weeks to manage this. </p>
+          <figure><img class="img-fluid mx-auto d-block" src="images/ux-portfolio/redcup-isometric2.jpg" alt="A complete isometric cutaway of the inside of the cafe">
+            <figcaption class="figure-caption text-center">The final inside drawing</figcaption>
+          </figure>
         <p>Offsetting the items on the home page wasn't fitting, so I ended up putting the sketches on the homepage. This also filled in the blank squares, which was handy. </p>
         <p>When you look at the <a href="http://redcup.com.au/book" title="Red Cup Cafe - book">final implementation</a>, you'll notice on small screens (which would be 80%+ of the readership) you can zoom into the picture. </p>
         <p>The zoom was a technique I learned from Shopify websites, which customers crave (you can't touch or feel products on a website, so any extra detail is helpful).</p>
@@ -268,7 +316,7 @@
         </div>
       </section>
     <div class="row justify-content-center">
-      <div class="col-md-10">
+      <div class="col-md-10 col-xl-8">
         <h4>Speed Optimising</h4>
         <p>I used Pingdom, GTmetrix, and Chrome's developer tools to work out speed bottlenecks and optimise the site.</p>
         <p>Images were optimised using optimizilla.</p>
@@ -320,17 +368,11 @@
         <div class="row">
           <div class="col-sm-6">
             <ul class="nav flex-column">
-              <h4>
-                <li class="nav-item"><a class="nav-link" href="#">Tech Skills</a></li>
-              </h4>
-              <li class="nav-item"><a class="nav-link" href="#">UI</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">UX</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">PM</a></li>
-              <h4>
-                <li class="nav-item"><a class="nav-link" href="#">Soft Skills</a></li>
-              </h4>
-              <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Conflict Resolution</a></li>
+              <h4>Websites currently online</h4>
+              <li class="nav-item"><a class="nav-link" href="http://redcup.com.au">Red Cup Cafe</a></li>
+              <p style="margin:1rem 0 0 0;">~1,000 product websites, on Shopify:</p>
+              <li class="nav-item"><a class="nav-link" href="https://natwild.com.au">Naturally Wild</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://filipinofoodwholesale.com.au">Philworld Trading Pty Ltd</a></li>
             </ul>
           </div>
           <div class="col-sm-6">
@@ -348,4 +390,5 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="/js/custom.js"></script>
 </body>

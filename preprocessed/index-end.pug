@@ -6,15 +6,11 @@ footer(style="background-color:#ccc;")
 			.row
 				.col-sm-6
 					ul.nav.flex-column
-						h4
-							+navli('#',"Tech Skills")(class="navfooter")
-						+navli('#',"UI")(class="navfooter")
-						+navli('#',"UX")(class="navfooter")
-						+navli('#',"PM")(class="navfooter")
-						h4
-							+navli('#',"Soft Skills")(class="navfooter")
-						+navli('#',"Team")(class="navfooter")
-						+navli('#',"Conflict Resolution")(class="navfooter")
+						h4 Websites currently online
+						+navli('http://redcup.com.au',"Red Cup Cafe")(class="navfooter")
+						p(style="margin:1rem 0 0 0") ~1,000 product websites, on Shopify:
+						+navli('https://natwild.com.au',"Naturally Wild")(class="navfooter")
+						+navli('https://filipinofoodwholesale.com.au',"Philworld Trading Pty Ltd")(class="navfooter")
 				.col-sm-6
 					h4 Contact Nathan
 					p Phone: <a href="tel:+61405990801">0405 990 801</a>
@@ -29,3 +25,5 @@ script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js",integrity="sha384-
 script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js",integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh",crossorigin="anonymous")
 //- Bootstrap needed for Alerts, Buttons, Carousel, Collapse, Dropdowns, Modals, Navbar, Tooltips, Scrollspy
 script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js",integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ",crossorigin="anonymous")
+//- My extra scripts
+script(src="/js/custom.js")

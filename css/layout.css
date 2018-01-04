@@ -21,6 +21,9 @@ section {
 .card-header figure {
   margin: 0; }
 
+.card {
+  margin: 1rem 0; }
+
 footer {
   margin-top: 4rem; }
   footer .jumbotron {
@@ -48,15 +51,31 @@ table#stars {
     width: 20%;
     min-width: 200px; }
   table#stars td:nth-child(2) {
-    max-width: 120px;
+    min-width: 120px;
     text-align: center; }
   table#stars td:nth-child(3) {
     max-width: 150px;
     text-align: center; }
   table#stars td:nth-child(4) {
-    min-width: 250px; }
-  table#stars .badge {
-    white-space: initial; }
+    min-width: 250px;
+    white-space: nowrap; }
+
+.table-responsive {
+  /* Scrolling shadows by @kizmarh and @leaverou */
+  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white)), -webkit-gradient(linear, left top, right top, from(white), to(white)), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.25)), to(rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, white, white), -webkit-linear-gradient(left, white, white), -webkit-linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-image: -o-linear-gradient(left, white, white), -o-linear-gradient(left, white, white), -o-linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), -o-linear-gradient(right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, white, white), linear-gradient(to right, white, white), linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
+  background-position: left center, right center, left center, right center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll; }
+
+@media (max-width: 750px) {
+  table#stars td:nth-child(3) {
+    display: none; } }
 
 .fa-quote-left {
   margin-right: 10px; }

@@ -7,7 +7,7 @@ mixin sectionhome(link, name, subtitle)
 		.row
 			if block
 				block
-mixin sectionhomecard(header,src,alt,caption)
+mixin sectionhomecard(header,src,alt,caption,src2)
 	.col-md-6
 		.card
 			.card-header= header
@@ -16,6 +16,10 @@ mixin sectionhomecard(header,src,alt,caption)
 				.card-body
 					figcaption
 						p.card-text= caption
+			if block
+				block
+mixin button(src, name)
+			a.btn.btn-primary(href=src)= name
 mixin rating(name)
 	section
 		.row
@@ -48,12 +52,15 @@ mixin rating-header(name)
 		td.align-middle(colspan="4")
 			span.badge.badge-primary
 				em= name
+//- VARIABLES
+//- ====================================================
+- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution"}
 //- HOME PAGE
 //- ====================================================
 .container
 	header
 		h1.text-center Hi! I'm Nathan Keen;<br /> a UX/UI designer
-		p.text-center This is my portfolio &amp; resume
+		p.text-center This is my portfolio
 	//- MAIN CONTENT SECTIONS
 	//- ====================================================
 	+sectionhome('UI','User Interface (UI)','What design will be intuitive for the user?')
@@ -61,20 +68,22 @@ mixin rating-header(name)
 		+sectionhomecard('Red Cup Cafe','http://via.placeholder.com/450x150','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
 	+rating('UI skills')
 		+rating-header('Languages')
-		+rating-row('5','CSS3 & earlier',"I could teach it",'#',"Red Cup Cafe 2017")
-		+rating-row('3','SASS/SCSS',"I understand most of it",'#',"This portfolio website (via Github)")
-		+rating-row('5','HTML5 & earlier',"I could teach it",'#',"This portfolio website (via Github)")
-		+rating-row('3','Pug/Jade',"I understand most of it",'#',"This portfolio website (via Github)")
-		+rating-row('2','JavaScript (native)',"I know the basics",'#',"Custom typewriter (via Codepen)")
+		+rating-row('5','CSS3 & earlier',"I could teach it",links.redcup+"#Proto","Red Cup Cafe 2017")
+		+rating-row('3','SASS/SCSS',"I understand most of it",links.githubpf,"This portfolio website (via Github)")
+		+rating-row('5','HTML5 & earlier',"I could teach it",links.githubpf,"This portfolio website (via Github)")
+		+rating-row('3','Pug/Jade',"I understand most of it",links.githubpf,"This portfolio website (via Github)")
+		+rating-row('2','JavaScript (native)',"I know the basics",'https://codepen.io/nathankeenmelb/pen/GOQwxb',"Custom typewriter (via Codepen)")
 		+rating-row('3','jQuery',"I understand most of it",'#',"")
 		+rating-row('1','React',"I'm learning it",'https://reactforbeginners.com/','via Wes Bos')
-		+rating-header('Software')
-		+rating-row('5','Adobe Photoshop',"I've used it for zonks",'#',"Red Cup Cafe 2008")
-		+rating-row('5','Adobe Illustrator',"I've used it for zonks",'#',"Infographic on Conflict Resolution")
-		+rating-row('4','Various utilities',"I've got a long list",'#',"My design tricks of the trade")
+		+rating-header('Design')
+		+rating-row('5','Adobe Photoshop',"I've used it for zonks",links.redcup2008,"Red Cup Cafe 2008 (via Behance)")
+		+rating-row('4','Adobe Illustrator',"I've used it for zonks",links.conflict,"Infographic on Conflict Resolution (via Behance)")
+		+rating-row('3','Adobe InDesign',"I know most of it")
+		+rating-row('4','Web & Print',"I could teach it",links.design,"Graphic Design portfolio (via Behance)")
+		//-+rating-row('4','Various utilities',"I've got a long list",'#',"My design tricks of the trade")
 		+rating-header('Frameworks')
-		+rating-row('4','Bootstrap',"I create from scratch",'#',"This portfolio website (via Github)")
-		+rating-row('5','Joomla',"I could teach it",'#',"Red Cup Cafe 2017")
+		+rating-row('4','Bootstrap',"I create from scratch",links.githubpf,"This portfolio website (via Github)")
+		+rating-row('5','Joomla',"I could teach it",links.redcup,"Red Cup Cafe 2017")
 		+rating-row('3','WordPress',"I understand most of it",'#',"")
 		//-+rating-row('4','Creativity/Ideation',"I confidently ideate",'#',"")
 		//- This whole section is a bit iffy - not sure about this level of detail, or whether it's best to SEE this: yes.
@@ -87,25 +96,30 @@ mixin rating-header(name)
 		+sectionhomecard('Red Cup Cafe','http://via.placeholder.com/350x150','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
 	+rating('UX skills')
 		+rating-header('Initiation')
-		+rating-row('3','Business Goals',"I confidently extract goals",'#',"Red Cup Cafe 2017")
-		//- or some software analysis chart
-		+rating-row('4','Competitor Analysis',"I chart/graph in my sleep",'#',"NFP Infohub")
+		+rating-row('3','Business Goals',"I confidently extract goals",links.redcup+"#Neg","Red Cup Cafe 2017")
+		//- '#',"NFP Infohub" or some software analysis chart
+		+rating-row('4','Competitor Analysis',"I chart/graph in my sleep")
 		+rating-header('Planning, excluding PM')
 		//- one example doesn't cut it: can we have like a whole section for this!?
-		+rating-row('3','User Personas/Profiling',"I understand most of it",'#',"Red Cup Cafe 2017")
-		+rating-row('3','User Stories/Journey',"I understand most of it",'#',"Red Cup Cafe 2017")
-		+rating-row('2','Emotional Design',"I understand some of it",'#',"Red Cup Cafe 2017")
+		+rating-row('3','User Personas/Profiling',"I understand most of it",links.redcup+"#UX","Red Cup Cafe 2017")
+		+rating-row('3','User Stories/Journey',"I understand most of it",links.redcup+"#UX","Red Cup Cafe 2017")
+		//- Review of book; or some work within Red Cup Cafe?
+		+rating-row('2','Emotional Design',"I've read the theory")
+		//- This site?
 		+rating-row('2','Inclusive Design & WCAG',"I understand some of it",'#',"")
-		+rating-row('4','Specifications',"I know pros & cons of many ways",'#',"Philworld Trading website")
+		//- Need to write this up '#',"Philworld Trading website"
+		+rating-row('4','Specifications',"I know pros & cons of many ways")
 		+rating-header('Prototyping, excluding UI')
-		+rating-row('5','Information Architecture',"I see dead patterns (6th sense)",'#',"Philworld Trading IA")
-		//- MUST have multiple examples, not just paper
-		+rating-row('3','Prototyping, lo-fi',"I confidently create",'#',"This portfolio website")
+		//- Need to write something here e.g. Naturally Wild natwild.com.au or "Philworld Trading IA"
+		+rating-row('5','Information Architecture',"I see dead patterns (6th sense)")
+		//- MUST have multiple examples, not just paper. ,'#',"This portfolio website"
+		+rating-row('3','Prototyping, lo-fi',"I confidently create")
 		//- MUST have multiple examples
-		+rating-row('3','Prototyping, hi-fi (interactive)',"I confidently create",'#',"Red Cup Cafe 2017")
+		+rating-row('3','Prototyping, hi-fi (interactive)',"I confidently create",links.redcup+"#Proto","Red Cup Cafe 2017")
 		//- and for something different - the tracking done on the Action? website
-		+rating-row('3','Qualitative Research',"I understand most of it",'#',"Red Cup Cafe 2017 tests")
-		+rating-row('3','Quantitative Research',"I confidently create + analyse",'#',"NFP survey")
+		+rating-row('3','Qualitative Research',"I understand most of it",links.redcup+"#Proto","Red Cup Cafe 2017")
+		//- Add '#',"NFP survey"
+		+rating-row('3','Quantitative Research',"I confidently create + analyse")
 		+rating-header('Quality Controls')
 		+rating-row('3','Standards/Guidelines',"I confidently create them",'#',"")
 		+rating-header('Software')
@@ -115,17 +129,23 @@ mixin rating-header(name)
 		+rating-row('2','Balsamiq',"I understand the basics",'#',"")
 		+rating-row('3','Proto.io',"I confidently use it",'#',"")
 	+sectionhome('PM','Project Management','How can we manage timeframes?')
-		+sectionhomecard('Outsourcing: Red Cup Cafe','http://via.placeholder.com/350x150','Screenshot from redcup.com.au',"How I delivered twice the value in the agreed time")
+		+sectionhomecard('Outsourcing','images/ux-portfolio/pm-parallel.jpg','Gantt chart showing two major pieces in parallel',"How I delivered twice the value for Red Cup Cafe in the agreed time through smart outsourcing.")
+			+button(links.redcup+"#Proto",'Read more')
 	+rating('PM skills')
-		+rating-row('5','PM artifacts',"I could teach this",'#',"Various examples")
-		+rating-row('3','Outsourcing',"I thoroughly understand it",'#',"Outsourcing on Upwork")
+		//- include ,'#',"Various examples"
+		+rating-row('5','PM artifacts',"I could teach this")
+		//- include little writeup ,'#',"Outsourcing on Upwork"
+		+rating-row('3','Outsourcing',"I thoroughly understand it")
+		//- Add here some items regarding Agile, Waterfall: perhaps a medium article of a review of a book on this?
 		+rating-header('Software')
-		+rating-row('4','Asana + Everhour',"I've ticked off thousands of tasks",'#',"PM for Agape Media Consulting")
+		//- include little writeup '#',"PM for Agape Media Consulting"
+		+rating-row('4','Asana + Everhour',"I've ticked off thousands of tasks")
 		+rating-row('3','Mavenlink',"I understand most of it",'#',"")
-		+rating-row('4','Basecamp',"I've broken it with too many projects",'#',"")
-		+rating-row('4','Trello',"I've broken it with too many tasks",'#',"")
+		+rating-row('4','Basecamp',"I've broken it",'#',"")
+		+rating-row('4','Trello',"I've broken it",'#',"")
 		+rating-row('3','Teamwork',"I understand most of it",'#',"")
-		+rating-row('4','MS Project',"I've pushed it beyond its limits",'#',"PSA Project Management")
+		//- inlcude a little writeup '#',"PSA Project Management"
+		+rating-row('4','MS Project',"I've pushed it beyond its limits")
 	//- ============ WHEN I HAVE TIME, INCLUDE BUSINESS ================
 	//-+sectionhome('Business','How can we ensure financial success?')
 		//-+sectionhomecard('Naturally Wild','http://via.placeholder.com/350x150','Screenshot from natwild.com.au',"Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!")
@@ -140,7 +160,7 @@ mixin rating-header(name)
 	+rating('Web skills')
 		+rating-row('5','WHM/cPanel',"I've done this for zonks",'#',"")
 		+rating-row('2','SQL',"I understand some of it",'#',"")
-		+rating-row('3','Github',"I understand most of it",'https://github.com/nathankeenmelb/',"Check out my Github account")
+		+rating-row('3','Github',"I understand most of it",links.github,"Check out my Github account")
 //- BOTTOM NAV
 //- ====================================================
 nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
