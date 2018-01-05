@@ -39,10 +39,11 @@ footer {
     margin-bottom: 0;
     background-color: inherit; }
 
-a[href^="http://"]:after, a[href^="https://"]:after {
-  display: none;
-  font-family: "Font Awesome 5 Solid";
-  content: "\f35d"; }
+a[href^="http://"]::after, a[href^="https://"]::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f35d";
+  margin-left: 3px; }
 
 .anchor {
   padding-top: 4rem; }
