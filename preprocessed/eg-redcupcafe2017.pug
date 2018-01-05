@@ -1,26 +1,3 @@
-//- FUNCTIONS
-//- ====================================================
-mixin articleintro(link, name, subtitle)
-	section
-		h2.anchor&attributes({'id': link})= name
-		p.text-muted= subtitle
-		.row
-			if block
-				block
-mixin articleimage(header,src,alt,caption)
-	.col-md-6
-		.card
-			.card-header= header
-			figure
-				img.card-img-top(src=src alt=alt)
-				.card-body
-					figcaption
-						p.card-text= caption
-mixin image(href,alt,caption)
-	figure
-		img.img-fluid.mx-auto.d-block(src=href,alt=alt)
-		figcaption.figure-caption.text-center= caption
-
 //- CONTENT
 //- ====================================================
 .container
@@ -32,7 +9,7 @@ mixin image(href,alt,caption)
 			p "I need a website" is the common request, but that results in poor websites.
 			p If I missed the strategic stage, the client would have missed out on several 5-6 figure opportunities.
 			p Hat tip to <a href="https://doubleyourfreelancing.com/rate/">Brennan Dunn, author of "Double Your Freelancing Rate"</a> for this planning process.
-		+articleimage('Red Cup Cafe','http://via.placeholder.com/350x150','',"Stuff.")
+		+image('images/ux-portfolio/ui-redcup.jpg','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
 	.row.justify-content-center
 		.col-md-10.col-xl-8
 			h4 My strategy process
@@ -92,7 +69,7 @@ mixin image(href,alt,caption)
 			p Much of the planning was done during the negotiation phase. You can't decide on a plan before understanding what the customers actually want, after all.
 			p From a UX perspective, I built user personas, gathered customer feedback, considered a few user scenarios, and mapped out possible features for each user scenario.
 			p From a wider view, I also enquired about his other systems such as POS, marketing and general processes. That was helpful for thinking through integration needs or possible scope/requirements deficiencies.
-		+articleimage('Red Cup Cafe','http://via.placeholder.com/350x150','',"Stuff.")
+		+image('http://via.placeholder.com/350x150','',"Stuff.")
 	.row.justify-content-center
 		.col-md-10.col-xl-8
 			h4 The target audience
@@ -138,7 +115,7 @@ mixin image(href,alt,caption)
 			p WordPress can deliver a better experience from its ease of use, but the client was not needing to update the site much. As to the front-end, people often relate to me: 'wow this looks like a WordPress site!'. 
 			p But while Joomla's limitations with ease of use can be overcome, WordPress can't easily overcome its security and structural issues.
 			p I gave a link to the hi-fi prototype to some testers for qualititative review.  
-		+articleimage('The starting point','images/ux-portfolio/redcup-ja_mono.jpg','The chosen template, JA Mono, by JoomlArt',"The chosen template, my starting point.")
+		+image('images/ux-portfolio/redcup-ja_mono.jpg','The chosen template, JA Mono, by JoomlArt',"The chosen template, my starting point.")
 	.row.justify-content-center
 		.col-md-10.col-xl-8
 			h4 The template setup
@@ -217,7 +194,7 @@ mixin image(href,alt,caption)
 			p Given this was on a fully-fledged CMS, attention to reducing speed was a huge need.
 			p Security issues were standard Joomla-specific steps, so I won't detail them here.
 			p Responsive work was incredibly important given probably 80% of people would be viewing from their mobiles. 
-		+articleimage('Speed testing','images/ux-portfolio/redcup-speed-optimising.png','Speed optimising results at a point in time',"Speed test results by GTmetrix at a point in time.")
+		+image('images/ux-portfolio/redcup-speed-optimising.png','Speed optimising results at a point in time',"Speed test results by GTmetrix at a point in time.")
 	.row.justify-content-center
 		.col-md-10.col-xl-8
 			h4 Speed Optimising

@@ -24,6 +24,15 @@ section {
 .card {
   margin: 1rem 0; }
 
+.vertcentre {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 footer {
   margin-top: 4rem; }
   footer .jumbotron {
@@ -54,8 +63,7 @@ table#stars {
     min-width: 120px;
     text-align: center; }
   table#stars td:nth-child(3) {
-    max-width: 150px;
-    text-align: center; }
+    max-width: 200px; }
   table#stars td:nth-child(4) {
     min-width: 250px;
     white-space: nowrap; }

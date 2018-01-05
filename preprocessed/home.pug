@@ -54,7 +54,7 @@ mixin rating-header(name)
 				em= name
 //- VARIABLES
 //- ====================================================
-- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution"}
+- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution",natwild:"/portfolio-NatWild2017.html"}
 //- HOME PAGE
 //- ====================================================
 .container
@@ -64,8 +64,10 @@ mixin rating-header(name)
 	//- MAIN CONTENT SECTIONS
 	//- ====================================================
 	+sectionhome('UI','User Interface (UI)','What design will be intuitive for the user?')
-		+sectionhomecard('Naturally Wild','http://via.placeholder.com/350x150','Screenshot from natwild.com.au','Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!')
-		+sectionhomecard('Red Cup Cafe','http://via.placeholder.com/450x150','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
+		+sectionhomecard('The Naturally Wild home page','images/ux-portfolio/ui-natwild.jpg','Screenshot from natwild.com.au','Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!')
+			+button(links.natwild,'Read more')
+		+sectionhomecard('Red Cup Cafe','images/ux-portfolio/ui-redcup.jpg','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
+			+button(links.redcup,'Read more')
 	+rating('UI skills')
 		+rating-header('Languages')
 		+rating-row('5','CSS3 & earlier',"I could teach it",links.redcup+"#Proto","Red Cup Cafe 2017")
@@ -92,8 +94,8 @@ mixin rating-header(name)
 		//-+rating-row('4','Website artifacts',"I've pushed it to the limits",'#',"")
 		//-+rating-row('3','CSS Animation',"I understand it",'#',"This portfolio website")
 	+sectionhome('UX','User Experience (UX)','What works for the user to make their experience the best?')
-		+sectionhomecard('Naturally Wild','http://via.placeholder.com/350x150','Screenshot from natwild.com.au','Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!')
-		+sectionhomecard('Red Cup Cafe','http://via.placeholder.com/350x150','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
+		//-+sectionhomecard('Naturally Wild','http://via.placeholder.com/350x150','Screenshot from natwild.com.au','Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!')
+		//-+sectionhomecard('Red Cup Cafe','http://via.placeholder.com/350x150','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
 	+rating('UX skills')
 		+rating-header('Initiation')
 		+rating-row('3','Business Goals',"I confidently extract goals",links.redcup+"#Neg","Red Cup Cafe 2017")

@@ -17,6 +17,26 @@ mixin quote(text)
 	blockquote.blockquote
 		i.fas.fa-quote-left
 		= text
+mixin articleintro(link, name, subtitle)
+	section
+		h2.anchor&attributes({'id': link})= name
+		p.text-muted= subtitle
+		.row.vertcentre
+			if block
+				block
+//-mixin articleimage(header,src,alt,caption)
+//-	.col-md-6
+//-		.card
+//-			.card-header= header
+//-			figure
+//-				img.card-img-top(src=src alt=alt)
+//-				.card-body
+//-					figcaption
+//-						p.card-text= caption
+mixin image(href,alt,caption)
+	figure
+		img.img-fluid.mx-auto.d-block(src=href,alt=alt)
+		figcaption.figure-caption.text-center= caption
 //- HTML
 //- ====================================================
 doctype html
