@@ -48,7 +48,9 @@ a[href^="http://"]::after, a[href^="https://"]::after {
 .fa-external-link-alt {
     margin-left:3px;
 }
-
+img.img-responsive {
+	width:100%;
+}
 // Star Ratings
 /*div.skills {
 	margin: 2rem;
@@ -111,4 +113,13 @@ table#stars {
 // Navigation
 #navbot .navbar-nav {
 	margin: 0 auto;
+}
+
+//Blog posts
+.post-meta {
+	text-transform: uppercase;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	font-size: 12px;
+	border-bottom: 1px solid #F5F5F5;
 }
