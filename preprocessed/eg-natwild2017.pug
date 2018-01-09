@@ -3,24 +3,118 @@
 .container
 	header
 		h1 How I built the Naturally Wild website
-	+articleintro("Neg",'Coming Soon','')
-		.col-md-6
-			p This writeup is incomplete!
-			p Please admire the live site, and look at how I've organised the ~1,000 products.
-			p The financial payback (aka ROI) from this site is huge, because each product now has its own page. The client's exposure to Google is therefore unprecedented for him. Some of the rarer items are getting very high search engine results. Also, it's now possible for people to actually purchase the products at their convenience.
-			p The site is getting an order a day and the owner tells me: I know I could advertise now on Facebook and Google, but I've got too many orders already!
-			p Please also admire the design work, though I started off with the <a href="https://themeforest.net/item/electro-gadgets-digital-responsive-shopify-theme/16544295?s_rank=15">"Electro Shopify Theme"</a> (note the differences).
-			
-			p This is the site: <a href="https://www.natwild.com.au" title="Naturally Wild Australia">www.natwild.com.au</a>
+	+articleintro("Biz",'Business Goals','','images/natwild/order-page.png',"An order page from Shopify's back-end, with SKU, pictures, and other necessary details such as sizing","Oh, the beautiful structure and ease of use of Shopify as opposed to a handwritten note!!")
+		p We built this site with a goal to automate some of the sales process and thereby save time. The shop is a one-man band, so, time was crucial to him. 
+		p We also identified that his customers were increasingly expecting to be able to purchase products online. So he was slowly losing customers, simply because his site, although containing lots of product information, wasn't usable (nor did it have a way to pay online). 
+		h4 The results so far
+		p The financial payback (aka ROI) from the site is already <strong>twice the amount he paid for it <em>every year</em></strong>. 
+		p This is partly because each product now has its own page. The client's exposure to Google is therefore unprecedented for him. Some of the rarer items are getting very high search engine results. 
+		p Also, it's now possible for people to actually purchase the products at their convenience.
+		p The site is getting an order a day and the owner tells me: I know I could advertise now on Facebook and Google, but I've got too many orders already!
+		p In terms of time, he's now in a position to work on higher value tasks, or even semi-retire, by hiring a junior to fulfill the orders. This is because the lengthy selection and sales process is almost totally automated. Also, the system is categorised and complete with images so the junior can print off the order and connect the image with one of the hundreds of similar items. 
+	+articleintro("IA",'Information Architecture','How ~1,500 items were organised','images/natwild/spreadsheet-orig.png','',"The original spreadsheet")
+		p It all started with an Excel spreadsheet, about 10 pages long. Granted, the client had the main headers, a tag like 'best seller', and the different sizes worked out, but that was about all. 
+		p The challenge was to make 1,500 items easy to sift through, without too many layers of hierarchy that would actually make it more complex.
 	.row.justify-content-center
 		.col-md-10.col-xl-8
-			+image('images/ux-portfolio/natwild-website.jpg','',"The finished website")
+			h4 Inventory
+			p My first step was to take stock of what we had. The owner wanted to do the categorisation himself, to cut down on costs and as well because he was the industry expert.
+			p I guided him on the number of first-level categories he should have, and he went away and tidied up the spreadsheet. Old items had to be deleted, and new ones added, too.
+			p We eventually agreed on 5 top-level categories: 
+			ul 
+				li Minerals, Crystals & Gemstones
+				li Seashells
+				li Sealife
+				li Fossils
+				li Bugs
+			p This also involved <strong>naming conventions</strong>. For example, sealife was 'marine life', but it seemed more user friendly to go with 'sealife'. 'Rocks' could have featured instead of a long 'Minerals, Crystals & Gemstones', but it wasn't descriptive enough. 
+			p A subcategory we worked out later couldn't have been 'Modified', it had to be 'Painted, Carved & Polished', because those were the terms used in the industry. 
+			p These naming conventions were important because there were several different areas that had to be consistent in order to not introduce confusion. These were the products pages, breadcrumbs, main navigation menu, filters, categories, tags, and probably other references. 
+			h4 Sitemap
+			p I worked out a sitemap from this, with discussion with the industry expert, the client.
+			+image('images/natwild/Sitemap-top.png',"The sitemap, showing Search, Catalogue, Wholesale, About Us, Contact Us (with subsection: Location, Policies), and Register/Login. Also shows the Footer.","The top level sitemap (catalogue is another section)")
+			p And the catalogue:
+			+image('images/natwild/Sitemap-categories.png',"The sitemap of the catalogue, showing the product categories","The 'catalogue', showing product hierarchy")
+			p From an Information Architecture point of view, I wanted to separate minerals, crystals & gemstones because that category was so large. But being the first 'user', and an outsider to the industry, I couldn't readily distinguish between a 'mineral' and a 'gem', although some like the polished (tumbled) gemstones were quite distinct. And a crystal is just a mineral. I had to just trust the expert.
+			p There were very few items in this category and I wanted to put them into another. Some of the 'sealife' were bones, but not fossils - like shark jaws. They look similar, but are definitely another category. And starfish aren't really 'shells', or 'bugs'. 
+			p So what I did was made the second level hierarchy almost as prominent as the first level. 
+			p At the navigation level this was achieved through a 'mega 'menu'. This allowed the full breadthe of the major categories to be shown straight away. 
+			+image('images/natwild/mega-menu.png',"The mega menu, which shows on one screen the 5 main categories, as well as the 3-6 subcategories for each","The mega menu, available via the top navigation")
+			p On the 5 home page sections, I made the subcategories more prominent by giving them more contrast. 
+			p Although, they were already setup so when you clicked on one, it filtered the items straight away (no refresh of the page). This way, customers can quickly flick through dozens of products and get a feel for what's available. 
+			+image('images/natwild/subcategories-home.jpg',"Subcategories for 'Shells' shown here are 'Natural Seashells, Natural Mixed Bag, Polished; Carved; Painted, Hermit Crab Shells","Subcategories and items on the home page for 'Shells'")
+			h5 Limitations of Shopify
+			p One frustration I had to work through was with a limitation of Shopify. It only allowed partial subcategorisation, favouring 'tags'. This meant that although the navigation could have subcategories, the breadcrumbs were rather flat. 
+			p This meant I had to add in 1st level categories in some places. I.e. 'Natural' couldn't work, it had to be 'Minerals, Crystals & Gemstones - Natural'. 'Australia' couldn't work as a tag, it had to be 'Origin - Australia'. 
+			h4 Categorisation (aka Taxonomy)
+			p The products were only sorted into single categories, and some had literally hundreds of items. Only part of it would be fixed by grouping the different colours and sizes into the 'one' product. 
+			p So, the process of sub-categorisation began. 
+			p But what I discovered was that having lots of items in a group wasn't necessarily difficult to sift through. The classic 'toothpaste aisle dilemma', where customers are paralysed at the 50+ options of toothpaste facing them, was NOT what I experienced here. (Also known as 'analysis paralysis'.)
+			p This was because there were not multiple different types of one product. Sure, there were different sizes, and colours for some, but if you know the reason for getting it, there's actually only a very limited number of options (and often, just one option).
+			p Instead, once a person is interested in 'gemstones', they'll then choose based on:
+			ul
+				li looks, particularly if they're a child
+				li origin, particularly if they're a collector
+				li size, particularly if they're a craftsperson
+				li what sells best, particularly if they're a store owner
+				li (or a particular scientific name, in which case they'll just use the search feature)
+			p Therefore, once a category had been chosen, I made the category page sorted by best selling, and suitable for quick visual scanning. 
+			p On the left, you could filter by other categories. This is where the origin subcategory (actually 'tag') went, as well as anything else that was a distinct category such as mixed bags, or those on hangers (necklaces). 
+			+image('images/natwild/category-page.jpg',"The 'minerals, crystals & gemstones - natural' category page, default sort to best selling, filters on the left, and other features","A category page, default sort to best selling, filters on the left, and other features")
+			p Size and specific colours would be chosen on the individual product pages.
+			p So, you're left with quirks like 215 products in the 'Minerals, Crystals & Gemstones - Natural' category. 
+			p Yet, while you could further categorise into names like 'Pyrite' and 'Quartz', the people who know those names are going to use the search function. Or the wholesale order section which allows for quick searching by name or SKU. 
+			p Nevertheless, I've setup up monitoring so we can go back and see if improvements can be made, if people report back that they are having trouble. 
+			h4 Data integrity and spreadsheet shenanigans
+			p Throughout this process, I was building the spreadsheet in readiness to upload to Shopify. 
+			p This involved lots of data manipulations and complex formulas for over 1,500 lines. 
+			p Sizes were mixed with the names so I had to split them at the appropriate place.
+			p Sizes were not consistent, so I had to use find and replace to change 'SM' into 'S'; '' into inches, and so on, for many variations. This is about easing the naming conventions.
+			p Some products had variations based on size, but others on colour, and some had no variations, so the final formula had to have multiple nested conditional statements:
+			+image('images/natwild/spreadsheet-option1value.png','The Excel formula =IF([@[Option1 Name]]="Title","Default Title",IF([@[Option1 Name]]="Size",[@[Size, Readied]],IF([@[Option1 Name]]="Colour",[@Colour],"Undefined")))',"The Excel formula for constructing the size or colour, e.g. 'XL 12-15cm'")
+			p I constructed SKUs (unique identification numbers) for each item, based on the first 4 letters of the item, and a sequential number (all formularised).
+			+image('images/natwild/spreadsheet-SKU.png',"Excel spreadsheet screenshot showing the capture of the first 4 letters, the sequential number, and the final SKU","The proces of getting the SKU")
+			p I constructed the 'handle' (slug) from the cleaned item name, using substitutions and the LOWER() function to make it lower case. This cleaned all the illegal characters, while still giving me freedom to fix the names later on. 
+			+image('images/natwild/spreadsheet-handle.png','Excel formula =LOWER(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE([@[Item, cleaned]]," ","-"),"&","and"),"(",""),")",""),"/","-"),"%","-percent-"),"\'",""),",",""))',"The formula for dynamically constructing the handle/slug")
+			p I constructed the product information from several other fields, adding in HTML (Excel's 'Concatenate' function, plus conditionals). (Not shown.)
+			p For the important (SEO meta tag) title field, I combined the name of the product with the category and subcategories. But this had a limit on the number of characters, so I had to substitute certain phrases for abbreviations, and make a limit on the number of characters (42) of the product name. 
+			+image('images/natwild/spreadsheet-seotitle.png','Excel formula =SUBSTITUTE(CONCATENATE(SUBSTITUTE(LEFT(PROPER([@[Item, cleaned]]),42),"Tumbled - ","")," [",SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE([@Category3],"Seashells - Polished, Carved & Painted","Seashells"),"Minerals, Crystals & Gemstones - Polished & Carved","Polished Minerals etc."),"Minerals, Crystals & Gemstones - Natural","Minerals etc."),"Sealife Gifts","Gifts"),IF([@Subcategory]>0,CONCATENATE(" > ",[@Subcategory]),""),"]")," > Crystals","")',"The formula for dynamically constructing the meta <title> tag")
+			p Tags had to be comma separated in ONE column. This involved checking to see whether an item had a tag first (if tag column > 0, then x, otherwise do nothing: "")
+			+image('images/natwild/spreadsheet-tags.png','Excel formula =CONCATENATE([@Category3],IF([@Subcategory]>0,CONCATENATE(", ",[@Subcategory]),""),IF([@Tags1]>0,CONCATENATE(", ",[@Tags1]),""),IF([@Tags2]>0,CONCATENATE(", ",[@Tags2]),""),IF([@[Sub-category (Country)]]>0,CONCATENATE(", ","Origin - ",[@[Sub-category (Country)]]),""))',"The formula for dynamically constructing the (Shopify) tags column")
+			p All this careful preparation took place in order to provide the best possible data from a limited time and regularly updated set of initial data (being cleaned, and having information added). 
+			p This was also done to provide as much data as possible for search engines. 
+			p The results, I should highlight again were that people are searching for his products and finding them in prime positions on Google/Bing. 
+			h4 Future testing: validation of navigation
+			p I'm interested in doing a <strong>reverse card sort (aka tree testing)</strong> to test how well the categorisation is performing. 
+			p This is where you start with the categories and ask users to sort items into the categories. I would envision using cards with product names or simply pictures, as if you remember seeing something but can't quite place it.  
+			p The value of this would be to validate the structure of the categories. 
+			p However, given the site is actually done, it would be more valuable to test this <em>on the site itself</em>, and see if, from pictures or a vague idea of an item, the user can find it. The response would be videoed or watched. 
+	+articleintro("UI",'User Interface','Recreating the in-store wonder','images/natwild/inside-photo.jpg','Photo of shelves full of crystals, colourful rocks, and more',"Just one of a number of shelves chock-full of amazing crystals, rocks and more!")
+			p The first thing that hits you when you walk into Simon's shop is the sheer wonder of hundreds of beautiful shells, fossils, gems, and rocks. They surround you. 
+			p Children's eyes widen in amazement. I think adults almost turn into children again, too, with the fascination of it all!
+			p So: lots of photos, a video, what do you do?
+	.row.justify-content-center
+		.col-md-10.col-xl-8
+			h4 How to fall in love?
+			p In order to re-create the wonder of the store experience on the web, I needed to provide an equally vast and yet intricate visual display on the home page.
+			p The starting home page (<a href="https://themeforest.net/item/electro-gadgets-digital-responsive-shopify-theme/16544295?s_rank=15">Electro Shopify Theme</a>) was a bit of a mess, I thought. It's sections weren't clearly defined, and there was no obvious categorisation. There were headphones next to computers, and cameras next to screens. 
+			p I ended up modifying the template - a config file written in JSON and the template files in liquid - to have the 5 top level categories showing with the same gallery view (repeated), gutting everything else.
+			+image('images/natwild/template-bestsellers.jpg',"View of the Shopify template Electro's 'best sellers' gallery items","The base gallery section that I modified and repeated, which uses the Owl Carousel jQuery plugin")
+			p I started with an idea to put the sections in order from grass to beach, then ocean and rocks, as if you are looking at a real beach. This may have supported customers' mental model to help them discover where the logical place for the categories were. 
+			p However, the owner wanted to promote the bigger selling items first, so I just went with a standalone background picture for each section. 
+			p In the end, this is what I came up with:
+			+image('images/natwild/natwild-website.jpg','',"The final home page design")
+			h4 Video
+			p Of course, an easy way re-create the experience is to actually show it via a video. 
+			p We didn't have the resources to do it ourselves, but "Big Review" did a smart video for Naturally Wild a couple of years back, and so we used that. 
+			p I've used a div as a wrapper to make the video responsive. <code>&lt;div class="video-slide"&gt;&ltiframe ...&gt;</code>.
+			p Please view the implementation live at <a href="https://natwild.com.au/">www.natwild.com.au</a>
 //- BOTTOM NAV
 //- ====================================================
-//-nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
-//-		ul.navbar-nav
-//-			+navli('#top',"Top")
-//-			+navli('#Neg',"Neg'n")
-//-			+navli('#UX',"UX")
-//-			+navli('#Proto',"Proto")
+nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
+		ul.navbar-nav
+			+navli('#top',"Top")
+			+navli('#Biz',"Goals")
+			+navli('#IA',"IA")
+			+navli('#UI',"UI")
 //-			+navli('#End',"Final")

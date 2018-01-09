@@ -54,7 +54,7 @@ mixin rating-header(name)
 				em= name
 //- VARIABLES
 //- ====================================================
-- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution",natwild:"/portfolio-NatWild2017.html"}
+- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution",natwild:"/portfolio-NatWild2017.html",portfolio:"/portfolio-2018.html"}
 //- HOME PAGE
 //- ====================================================
 .container
@@ -65,8 +65,8 @@ mixin rating-header(name)
 	//- ====================================================
 	+sectionhome('UI','User Interface (UI)','What design will be intuitive for the user?')
 		+sectionhomecard('The Naturally Wild home page','images/ux-portfolio/ui-natwild.jpg','Screenshot from natwild.com.au','Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!')
-			+button(links.natwild,'Read more')
-		+sectionhomecard('Red Cup Cafe','images/ux-portfolio/ui-redcup.jpg','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
+			+button(links.natwild+"#UI",'Read more')
+		+sectionhomecard('Red Cup Cafe','images/redcup/ui-redcup.jpg','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
 			+button(links.redcup,'Read more')
 	+rating('UI skills')
 		+rating-header('Languages')
@@ -94,7 +94,8 @@ mixin rating-header(name)
 		//-+rating-row('4','Website artifacts',"I've pushed it to the limits",'#',"")
 		//-+rating-row('3','CSS Animation',"I understand it",'#',"This portfolio website")
 	+sectionhome('UX','User Experience (UX)','What works for the user to make their experience the best?')
-		//-+sectionhomecard('Naturally Wild','http://via.placeholder.com/350x150','Screenshot from natwild.com.au','Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!')
+		+sectionhomecard('Naturally Wild Information Architecture','images/natwild/sitemap-thumb.png','Part of the product sitemap','Planning and delivering on IA for 1,500 products and variations')
+			+button(links.natwild,'Read more')
 		//-+sectionhomecard('Red Cup Cafe','http://via.placeholder.com/350x150','Screenshot from redcup.com.au','Built using Joomla, the owner wanted a unique and authentic look')
 	+rating('UX skills')
 		+rating-header('Initiation')
@@ -113,7 +114,7 @@ mixin rating-header(name)
 		+rating-row('4','Specifications',"I know pros & cons of many ways")
 		+rating-header('Prototyping, excluding UI')
 		//- Need to write something here e.g. Naturally Wild natwild.com.au or "Philworld Trading IA"
-		+rating-row('5','Information Architecture',"I see dead patterns (6th sense)")
+		+rating-row('5','Information Architecture',"I see dead patterns (6th sense)",links.natwild+"#IA",'Naturally Wild')
 		//- MUST have multiple examples, not just paper. ,'#',"This portfolio website"
 		+rating-row('3','Prototyping, lo-fi',"I confidently create")
 		//- MUST have multiple examples
@@ -139,6 +140,8 @@ mixin rating-header(name)
 	+sectionhome('PM','Project Management','How can we manage timeframes?')
 		+sectionhomecard('Outsourcing','images/ux-portfolio/pm-parallel.jpg','Gantt chart showing two major pieces in parallel',"How I delivered twice the value for Red Cup Cafe in the agreed time through smart outsourcing.")
 			+button(links.redcup+"#Proto",'Read more')
+		+sectionhomecard('Agile Project Management','images/ux-portfolio/book-user-story-mapping-sm.jpg',"Jeff Patton's 'User Story Mapping' book","How I have managed this portfolio site")
+			+button(links.portfolio,'Read more')
 	+rating('PM skills')
 		//- include ,'#',"Various examples"
 		+rating-row('5','PM artifacts',"I could teach this")

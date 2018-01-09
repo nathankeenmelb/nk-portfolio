@@ -1,0 +1,62 @@
+//- CONTENT
+//- ====================================================
+.container
+	header
+		h1 The Agile plan for this portfolio site
+	+articleintro("Plan",'The plan','','',"","")
+		p I'll admit it. I haven't had formal agile experience. Yet, because of my strong project management training (in Civil Engineering study + practice), and innate organisational ability, I'm a natural at it.
+		p While most projects I've done have been more or less building websites, rather than ever-expanding SaaS products, I've been able to follow an Agile/Lean methodology for this portfolio. 
+		p One of the great things about an Agile method is that you can better manage timeframes by building the core functions first, and then having the option to defer 'nice-to-have' features later.
+		p Of course, getting early feedback is a very nice thing too. As we learned in Civil Engineering, the later the changes, the more expensive they are.
+	.row.justify-content-center
+		.col-md-10.col-xl-8
+			h4 1st iteration: The minimum viable product
+			p I wanted a new portfolio up that displayed my latest projects. This would be to communicate to prospective employees my work.
+			p So, minimally, I had to have a writeup on these projects. 
+			p I needed to learn Bootstrap better, so decided to use that framework instead of WordPress, Joomla or another CMS. 
+			p I mapped out some basic content needs for the first iteration, such as a brief description of skills, and the main UX/UI piece: Red Cup Cafe. I would leave colour schemes and design to a later iteration.
+			+image('images/ux-portfolio/26-12-2017 portfolio-desktop-wireframe.png','Early rendition of website showing navigation, and placeholder information and images','Half way through the MVP')
+			p To do this, I've used Prepros.io which is installable on Windows/Mac and does all the Node.js npm goodness for you, in terms of preprocessing for SASS, Pug (Jade), and managing live browser updates when you save, and FTP.
+			p I whacked a <span class="badge badge-warning">Beta</span> badge on it, and uploaded it.
+			+image('images/ux-portfolio/20180105-portfolio-tablet.jpg','','First version complete!')
+			h4 2nd iteration: Content, content, content
+			p I had thought to do design work at this stage ("I really need to WOW hiring managers!"), but I needed more core content first:
+			ul
+				li The Naturally Wild IA process
+				li My work experience history
+			p I'm not yet finished this stage
+			h4 3rd iteration: Design
+			p Grey is not great, so I am planning to work on the design in this stage.
+			p But it's clearly less important because my design skills can be clearly seen on the sites that I've shown already.
+			h4 4th iteration: Animation
+			p I'd like to test and grow my CSS/JS animation skills, and build on the theming of the design work.
+			p This is really about growing my skills, and has to be built after the core design strategy and theme has been mapped.
+	+articleintro("Learning",'Learning','','images/ux-portfolio/book-user-story-mapping.jpg',"Book cover - User Story Mapping (O'Reilly) by Jeff Patton","")
+		p I've been reading 'User Story Mapping: discover the whole story, build the right product' by Jeff Patton (O'Reilly books). 
+		p I think overall his insights and the process is solid. 
+		p I'm wondering though, whether the innovation here was:
+		ul
+			li A new visual style of project management, i.e. sticky note style instead of lists?
+			li New names for the same things, i.e. stories for functions; story maps for gantt charts, iterations/sprints for milestones?
+			li A new focus on users rather than functions, i.e. flipping the task list to across the page and highlighting the user stories?
+			li Or that simply he was the first to collate all of these things (i.e. they don't really seem that different to other project management techniques)?
+		p Regardless of Patton's contribution (much or little), the process has these advantages and disadvantages:
+		ul
+			li It makes project management sexy again, and planning like this makes better products
+			li More people are visual learners than word-based learners, so the message can get across better
+			li Managing visually is easier than with text, and naturally involves more people, especially if done physically on a big wall
+			li The naming is probably from the wider Agile movement, and is annoying, but inconsequential (story map? Okay, gantt chart is pretty bad too)
+			li The focus on user stories is demonstrably better than focussing on abstract functions, but there's no reason we couldn't move back the terminology from 'epics' to 'milestones', and 'user stories' to 'functions' - provided we add the structural elements of 'who' and 'why'. That seems to me to be more meaningful than fancy names that have to be relearned.
+		p As Patton says, the main goal is shared learning, not getting the technique correct. I'd say, well done! Visual communication pretty much always beats text-based communication for learning, so visualising project management like this is wonderful.
+		p However, the core disadvantage of this method is the inefficiency compared to writing it out. Visual methods are always a bit slower. But this is mitigated somewhat by software such as Mural.ly and sticky note style interfaces which can be written in text then visualised.
+		
+
+//- BOTTOM NAV
+//- ====================================================
+//-nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
+//-		ul.navbar-nav
+//-			+navli('#top',"Top")
+//-			+navli('#Biz',"Goals")
+//-			+navli('#IA',"IA")
+//-			+navli('#UI',"UI")
+//-			+navli('#End',"Final")
