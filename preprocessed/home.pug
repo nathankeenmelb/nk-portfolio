@@ -55,6 +55,8 @@ mixin rating-header(name)
 //- HOME PAGE
 //- ====================================================
 .container
+	.logo
+		+image('images	/logo-NK-1mdpi.png','Logo Nathan Keen')
 	header
 		h1.text-center Hi! I'm Nathan Keen;<br /> a UX/UI designer
 		p.text-center This is my portfolio
@@ -99,17 +101,17 @@ mixin rating-header(name)
 		+rating-row('3','Business Goals',"I confidently extract goals",links.redcup+"#Neg","Red Cup Cafe 2017")
 		//- '#',"NFP Infohub" or some software analysis chart
 		+rating-row('4','Competitor Analysis',"I chart/graph in my sleep")
-		+rating-header('Planning, excluding PM')
+		+rating-header('Planning')
 		//- one example doesn't cut it: can we have like a whole section for this!?
 		+rating-row('3','User Personas/Profiling',"I understand most of it",links.redcup+"#UX","Red Cup Cafe 2017")
-		+rating-row('3','User Stories/Journey',"I understand most of it",links.redcup+"#UX","Red Cup Cafe 2017")
+		+rating-row('3','User Story Mapping',"I understand most of it",links.workxp+"#Learning","Book review (Jeff Patton)")
 		//- Review of book; or some work within Red Cup Cafe?
-		+rating-row('2','Emotional Design',"I've read the theory")
+		+rating-row('3','User Journeys',"I understand most of it",links.redcup+"#UX","Red Cup Cafe 2017")
 		//- This site?
 		+rating-row('2','Inclusive Design & WCAG',"I understand some of it",'#',"")
 		//- Need to write this up '#',"Philworld Trading website"
 		+rating-row('4','Specifications',"I know pros & cons of many ways")
-		+rating-header('Prototyping, excluding UI')
+		+rating-header('Prototyping')
 		//- Need to write something here e.g. Naturally Wild natwild.com.au or "Philworld Trading IA"
 		+rating-row('5','Information Architecture',"I see dead patterns (6th sense)",links.natwild+"#IA",'Naturally Wild')
 		//- MUST have multiple examples, not just paper. ,'#',"This portfolio website"

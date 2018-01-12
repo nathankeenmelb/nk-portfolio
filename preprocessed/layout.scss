@@ -4,6 +4,23 @@ body { //if fixed to top, move the body down
   padding-top: 4.5rem;
   position: relative;
 }
+
+a {
+	color: black;
+	border-bottom: 1px dashed black;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #ffc107;
+	border-bottom-color: #ffc107;
+	text-decoration: none;
+}
+
+nav a {
+	border-bottom: none;
+}
+
 /*
 @media (max-width: 576px) { //on mobiles, fix nav to bottom
   .fixed-top {
@@ -34,6 +51,10 @@ footer {
 	.jumbotron {
 		margin-bottom:0;
 		background-color:inherit;
+	}
+	a {
+	color: #f8f9fa;
+	border-bottom: none;
 	}
 }
 a[href^="http://"]::after, a[href^="https://"]::after { 
@@ -226,10 +247,6 @@ table#stars {
 
 .timeline .card-body span {
 	white-space: nowrap;
-}
-
-.timeline a {
-	color: #20c997;
 }
 
 // Timeline END

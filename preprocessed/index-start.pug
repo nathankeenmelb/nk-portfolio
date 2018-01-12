@@ -42,14 +42,19 @@ mixin image(href,alt,caption)
 	figure
 		img.img-fluid.mx-auto.d-block(src=href,alt=alt)
 		figcaption.figure-caption.text-center= caption
-mixin image-2col(href,alt,caption)
+mixin imagewithlink(href,alt,caption)
+	figure
+		a(href=href,alt=alt)
+			img.img-fluid.mx-auto.d-block(src=href,alt=alt)
+		figcaption.figure-caption.text-center= caption
+mixin image-2col(src,alt,caption)
 	.col-md-6
 		figure
-			img.img-fluid.mx-auto.d-block(src=href,alt=alt)
+			img.img-fluid.mx-auto.d-block(src=src,alt=alt)
 			figcaption.figure-caption.text-center= caption
 //- VARIABLES
 //- ====================================================
-- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution",natwild:"/portfolio-NatWild2017.html",portfolio:"/portfolio-2018.html",philworld:"https://filipinofoodwholesale.com.au",workxp:"/work-experience.html"}
+- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution",natwild:"/portfolio-NatWild2017.html",portfolio:"/portfolio-2018.html",philworld:"https://filipinofoodwholesale.com.au",workxp:"/work-experience.html",codepen:"https://codepen.io/nathankeenmelb"}
 //- HTML
 //- ====================================================
 doctype html
@@ -58,6 +63,16 @@ html
 		title Portfolio of Nathan Keen
 		meta(charset="utf-8")
 		meta(name="viewport",content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+		link(rel='manifest', href='/manifest.json')
+		link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+		meta(property='og:title', content="Nathan Keen's Portfolio")
+		meta(property='og:image', content='images/logo-NK-1xxhdpi.png')
+		meta(property='og:description', content='UX/UI web designer')
+		meta(property='og:url', content='www.nathankeen.id.au')
+		meta(name='theme-color', content='#ffffff')
 		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css",integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb",crossorigin="anonymous")
 		link(rel="stylesheet",href="css/fontawesome.css")
 		link(rel="stylesheet",href="css/layout.css")

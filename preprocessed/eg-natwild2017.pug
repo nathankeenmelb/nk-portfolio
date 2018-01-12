@@ -86,6 +86,55 @@
 			p I'm interested in doing a <strong>reverse card sort (aka tree testing)</strong> to test how well the categorisation is performing. 
 			p This is where you start with the categories and ask users to sort items into the categories. I would envision using cards with product names or simply pictures, as if you remember seeing something but can't quite place it.  
 			p The value of this would be to validate the structure of the categories. However, given the site is actually done, it would be more valuable to test this <em>on the site itself</em>, and see if, from pictures or a vague idea of an item, the user can find it. The response would be videoed or watched. 
+	+articleintro("UX",'User Experience',"Catering to different users' expectations and needs",'','',"")
+			p  
+	.row.justify-content-center
+		.col-md-10.col-xl-8
+			h4 The customers & user research
+			p The owner/client had been in the business for many years. He was greatly knowledgeable about everything from sales to the products, and how everything worked. 
+			p <strong>User Research</strong>
+			p Here are the methods I used to understand the situation better:
+			ul
+				li Discussion with the client and sales staff 
+				li Meetings in the store, standing out of the way (watching) when customers needed to be attended to
+				li Visiting one of his shows he frequents, and experiencing one type of customer's full journey for myself
+				li Collection of data from customer reviews online
+			p I drew up a mindmap of my findings, detailing the different types of customers that bought from him. Showing 2 of the 6 types.
+			p <em>Click the image to show in full</em>
+			+imagewithlink('images/natwild/users-mindmap.png',"A mindmap for collectors and kids","User emapthy maps and user scenarios")
+			p Displayed differently, it could easily have been transformed into a full customer journey map. 
+			p Now, the client wanted the focus to be on wholesale customers.
+			p This pushed the retail customers like kids, amateur collectors, craftspeople, and hobbyists to the background. We could do more work on them in a couple of years.
+			p In hindsight, I should have been more proactive in then investigating life from a wholesaler's perspective. However, the wholesalers are buying the items for retailers, so understanding this was still quite helpful. For example, I saw how necessary it was to show to wholesalers 'this sells the best'. I subsequently configured the site to show any group of item, by default, by 'best selling'. 
+			h4 Flow charts
+			h5 New wholesale customers
+			p I had to think about new wholesale customers - how were we to 'onboard' them?
+			p One of the client's main strengths was in sales, partly because he had so many great stories of where all the rocks came from. (Anyone who can make what is essentially just a bit of dirt sound cool needs airtime!)
+			p One option was to allow wholesale customers to add items to their cart, and even order, after which Naturally Wild would get onto them. One problem was that the prices were retail&mdash;twice the wholesale!&mdash;so they might have baulked before they started.
+			p The solution we went with involved highlighting 'wholesale' through the main navigation. This didn't instruct them on the process immediately, though. We led with the carrot first: "Wholesale customers can receive a 50% discount off RRP". Then because there were very few new wholesale customers, and a form would have lost the opportunity to connect and build rapport, we instructed them to phone. 
+			p <strong>User flow diagramming</strong>
+			p I mapped this process out using Timblee. This user would typically find themselves on the site from a Google search, so that is where it began. 
+			p <em>Click on the image to open it in full</em>
+			+imagewithlink('images/natwild/userflow-newcustomer.png',"User flow diagram from a search","New wholesale customer flow through the site")
+			p One thing I learned from the flow diagram was that there are always varying ways people come into and move through your site.  
+			p If a new wholesale customer didn't see the 'wholesale' button, we could have added in more messages, but decided against it. They would probably call if they were interested, or if they ordered, the discount could be applied after that point.
+			h5 Current wholesale customers
+			p I had thought current customers would also be drawn to the 'wholesale' page.
+			p This was fine because the instructions for newcomers was a single line, and it reminded current customers of the value they were getting. 
+			p The reason current wholesale customers would want this page was for a quick item lookup. They already know the items they want: there's no need to research them.
+			p The form uses AngularJS (although, I did not write it) and cuts out the research time when certain customers don't need to research anymore. 
+			p I said 'had thought' they'd do this. That was before I did a full user flow diagram. 
+			p <em>Click the image to open in full</em>
+			+imagewithlink('images/natwild/userflow-currentcustomers.png','A user flow diagram showing the complex decisions and pathways a current customer might make on ordering again','The user flow diagram for a current customer, wanting to order again')
+			p What I saw was that it was highly likely for customers to go back to an email, particularly if it was that order they wanted again. Alternatively, they'd use the search or catalogue. 
+			p Customers would hardly think to click on 'Wholesale' to search for a product. The search bar and navigation are not <em>that</em> difficult to find!
+			p But the wholesale form would be much quicker for them, so I added in a little message under the search bar.
+			p This would only appear when you're logged in, to avoid clutter and wasting retailers' time. All wholesalers have an account, but very few retailers would. 
+			+image('images/natwild/quickorder.png',"Under the search bar I've written a single line Know your order? SKU? Use the 'Wholesale' search & quick add",'The link under the search goes to the Angular bulk order form')
+			p I think if I had more time, I'd do a little onboarding journey with Intro.js or similar tour feature.
+			p <em>What else did the flow diagram teach me?</em>
+			p The sheer length of the process, particularly if you forgot your password (wholesale customers aren't doing this every day&mdash;it's maybe every 3-6 months)! 
+			p If it were technically possible, I'd do what Medium does and email people each time they want to login, particularly as some people might store their credit card on the system. That seems easier for a rare process, and much more secure (the password would not be easy to hack and/or re-used).
 	+articleintro("UI",'User Interface','Recreating the in-store wonder','images/natwild/inside-photo.jpg','Photo of shelves full of crystals, colourful rocks, and more',"Just one of a number of shelves chock-full of amazing crystals, rocks and more!")
 			p The first thing that hits you when you walk into Simon's shop is the sheer wonder of hundreds of beautiful shells, fossils, gems, and rocks. They surround you. 
 			p Children's eyes widen in amazement. I think adults almost turn into children again, too, with the fascination of it all!
@@ -113,5 +162,6 @@ nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
 			+navli('#top',"Top")
 			+navli('#Biz',"Goals")
 			+navli('#IA',"IA")
+			+navli('#UX',"UX")
 			+navli('#UI',"UI")
 //-			+navli('#End',"Final")
