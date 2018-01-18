@@ -64,7 +64,7 @@
 			p Having been at an impasse because the proposal was too high, we agreed to a compromise and went from an off-the-shelf template instead of a custom one. 
 	+articleintro("UX",'User Experience Planning','','http://via.placeholder.com/350x150','',"Stuff.")
 		p Much of the planning was done during the negotiation phase. You can't decide on a plan before understanding what the customers actually want, after all.
-		p From a UX perspective, I built user personas, gathered customer feedback, considered a few user scenarios, and mapped out possible features for each user scenario.
+		p From a UX perspective, I built user personas, gathered customer feedback, considered a few user scenarios, built journey maps for these, and uncovered as many opportunities as possible.
 		p From a wider view, I also enquired about his other systems such as POS, marketing and general processes. That was helpful for thinking through integration needs or possible scope/requirements deficiencies.
 	.row.justify-content-center
 		.col-md-10.col-xl-8
@@ -82,10 +82,15 @@
 			h4 User Scenarios / Customer Journeys
 			p From the personas I put together some user scenarios.
 			+image('images/redcup/redcup-user-scenarios.png',"An example of a user scenario with the old and the new, with the solution in place.","This scenario depended on the full solution, not just the website (the only part done to date)")
-			//- Except, I haven't demonstrated that I have indeed thought about their emotions and full experience. Need to show better
+			p This helped me to see what the whole journey would be like, before sketching them. 
+			+imagewithlink('images/redcup/redcup-customer-journey-maps-business-min.jpg',"One of my customer journey maps showing the range of emotions for an optimum experience and a poor one","Two businesswomen decide to go to the cafe, and this maps an optimum and a poor experience, and the opportunities therein")
+			+imagewithlink('images/redcup/redcup-customer-journey-maps-student-min.jpg',"One of my customer journey maps showing the range of emotions for an optimum experience and a poor one of students on a hot day","A group of students go to the cafe after school. The red line shows an optimum experience, and the green a poor experience.")
+			p For the purpose of learning, I made this into a digital map using UXPressia afterwards. I found, as expected, the diagram wasn't as flexible. It also wasn't as visual. But it was a lot clearer!
+			p <em>(Click the image to show in full)</em>
+			+imagewithlink('images/redcup/customer-journey-map-student-uxpressia.png',"A customer journey map using UXPressia","UXPressia didn't box me in too much, but nothing is as flexible as paper. For example, I couldn't show the potential gains from doing a certain opportunity.")
 			p The purpose of this exercise is to uncover the full range of touchpoints, emotions, and customer experiences surrounding the product. 
 			p I gained a better appreciation around the following questions: why do they get coffee? What do they want out of it? Is speed important? Is the taste important? What is important?
-			p The importance and convenience of an app seriously came to the forefront through this. 
+			p The importance and convenience of an app seriously came to the forefront through this, amongst other things the cafe could do internally.
 			p With an app, I discovered you could:
 			ul
 				li Deliver on speed for those in a rush
@@ -155,7 +160,9 @@
 			p I realise you want to test your actual customers, or as close as possible. That was going to be expensive. I used Upwork again, knowing I could get 10-20 minute video responses for about $10-$20 each. 
 			p I opted for some fairly basic parameters, knowing that the cheaper people would probably be overseas. I asked for those with experience of Australian culture. 
 			p In order to cut poor quality responses, I informed applicants they needed to be familiar with the 'UserTesting - Example of a 5 star test' videos (they could search YouTube for those). 
-			p I chose several questions that I took from UserTesting and other sites. If you like, <a href="#testingquestions" data-toggle="collapse" aria-expanded="false" aria-controls="testingquestions">you can view the questions now [open]</a>.
+			p I chose several questions that I took from UserTesting and other sites. If you like, 
+				a(href="#testingquestions",data-toggle="collapse",aria-expanded="false",aria-controls="testingquestions") you can view the questions now 
+					i.fas.fa-plus-square
 			.collapse#testingquestions
 				ol 
 					li Having spent perhaps 5-10 seconds only on the site, what are your first impressions - would you go there?
@@ -182,15 +189,15 @@
 				li The booking page was basically 'phone us', which wasn't simple. To encourage more function bookings, we added a form. 
 				li Links to the address/map weren't working for iPhones, so I changed it to <code>http://maps.apple.com/...</code>, which still works on Android (yes, opens in Google Maps).
 				li The opening hours were listed at an angle, which gave it a unique look, but were too hard to read. In consultation with the client, I changed it to my other idea, of using night and sun icons to add uniqueness. This also conveys the closing times. 
-				li Totally changed the menu system, which on mobiles slid out from the side ('offcanvas') but at a grand total of 4 items, was totally unnecessary. 
+				li Totally changed the menu system, which on mobiles slid out from the side ('offcanvas') but at a grand total of 4 items, was totally unnecessary. Now the menu was four fixed items on the bottom (most users of the site would be on their mobiles, and most mobile users hold their phones on the bottom).
 				li A couple of template/CSS-related issues.
 				li The Facebook feed was simply unnecessary. A link to the page was all that was needed.
-			p I got positive feedback about a lot of things, of course. For example, the visuals and the submenu on the 'menu' page (which uses Bootstrap's scrollspy for the subsections. 
+			p I got positive feedback about a lot of things, of course. For example, the visuals on the home page made people's mouth water, and they like the submenu on the 'menu' page (which uses Bootstrap's scrollspy for the subsections). It made navigation on that long page easy.
 	+articleintro("End",'Finalising','Optimising, securing, making final changes.','images/redcup/redcup-speed-optimising.png','Speed optimising results at a point in time',"Speed test results by GTmetrix at a point in time.")
 		p At this stage I bedded down on details.
 		p Given this was on a fully-fledged CMS, attention to reducing speed was a huge need.
 		p Security issues were standard Joomla-specific steps, so I won't detail them here.
-		p Responsive work was incredibly important given probably 80% of people would be viewing from their mobiles. 
+		p Responsive work was incredibly important given probably 80% of people would be viewing from their mobiles. Obviously, a mobile-first approach would be needed (partly this is building for mobiles, then adding features for larger screens, so those on their phones don't have to download large files).
 	.row.justify-content-center
 		.col-md-10.col-xl-8
 			h4 Speed Optimising
