@@ -1,3 +1,5 @@
+/* Mixins */
+/* @include box-shadow(1px,1px,20px,0, rgba(0,0,0,0.2), false); */
 /* Nav settings  */
 body {
   min-height: 75rem;
@@ -104,6 +106,14 @@ table#stars {
 @media (max-width: 750px) {
   table#stars td:nth-child(3) {
     display: none; } }
+
+table#tshaped {
+  text-align: center; }
+  table#tshaped td {
+    vertical-align: middle;
+    border: 1px solid black; }
+  table#tshaped td.empty {
+    border: 0; }
 
 .fa-quote-left {
   margin-right: 10px; }
@@ -216,3 +226,23 @@ table#stars {
 
 .timeline .card-body span {
   white-space: nowrap; }
+
+img.shadow {
+  -webkit-box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px; }
+
+.horizontalimage {
+  overflow-x: scroll;
+  white-space: nowrap;
+  width: 100%; }
+  .horizontalimage img {
+    height: 100%;
+    max-width: initial; }
+
+.divright {
+  width: 1px;
+  height: 1px;
+  position: relative;
+  left: 1000px; }

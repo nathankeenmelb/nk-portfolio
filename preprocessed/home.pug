@@ -62,6 +62,33 @@ mixin rating-header(name)
 		p.text-center This is my portfolio
 	//- MAIN CONTENT SECTIONS
 	//- ====================================================
+	+articleintro("tshaped",'I have a T-Shaped skill set','','images/marketing/tshaped.png',"An I is a specialist, which is bad; a - is a generalist, which is also bad; but a T is a generalising specialist, which is good","A generalising specialist is also called a T-shaped person")
+		p Tim Brown, CEO of one of the greatest design companies in the world, IDEO, hires people who are T-shaped.
+		p I-shaped people are traditional experts, specialist in one field.
+		p T-shaped people are the best creatives, able to empathise with a wide field and apply their mastery to new fields.
+	.row.justify-content-center
+		.col-md-10.col-xl-8
+			h4 My generalist skills
+			ul
+				li Finance/ Accounting
+				li Business Management
+				li Engineering (Civil Engineering degree)
+				li Print
+				li Email/ Marketing
+				li Web Development
+				li Tech Support
+				li Project Management
+				li Psychology
+				li Conflict Resolution (2012 course)
+			p Many of these skills have come because I've run my own business and had to do everything.
+			p Other skills have come because I've often worked in small organisations.
+			p These skills help me to empathise with other members of the design process. For example, I can more easily work with finance to create effective solutions for displaying data, having a business background.
+			h4 My specialist skills
+			p Please read on about my web design specialisations in UI, UX and IA
+	section
+		.row.justify-content-center
+			.col-md-12.col-xl-10
+				h2#tshaped 
 	+sectionhome('UI','User Interface (UI)','What design will be intuitive for the user?')
 		+sectionhomecard('The Naturally Wild home page','images/ux-portfolio/ui-natwild.jpg','Screenshot from natwild.com.au','Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!')
 			+button(links.natwild+"#UI",'Read more')
@@ -80,7 +107,9 @@ mixin rating-header(name)
 		+rating-row('5','Adobe Photoshop',"I've used it for zonks",links.redcup2008,"Red Cup Cafe 2008 (via Behance)")
 		+rating-row('4','Adobe Illustrator',"I've used it for zonks",links.conflict,"Infographic on Conflict Resolution (via Behance)")
 		+rating-row('3','Adobe InDesign',"I know most of it")
-		+rating-row('4','Web & Print',"I could teach it",links.design,"Graphic Design portfolio (via Behance)")
+		+rating-row('5','Web Interfaces',"I could teach it")
+		+rating-row('3','Marketing campaigns',"I thoroughly understand it")
+		+rating-row('3','Print',"I thoroughly understand it",links.design,"Graphic Design portfolio (via Behance)")
 		//-+rating-row('4','Various utilities',"I've got a long list",'#',"My design tricks of the trade")
 		+rating-header('Frameworks')
 		+rating-row('4','Bootstrap',"I create from scratch",links.githubpf,"This portfolio website (via Github)")
@@ -113,7 +142,7 @@ mixin rating-header(name)
 		+rating-row('4','Specifications',"I know pros & cons of many ways")
 		+rating-header('Prototyping')
 		//- Need to write something here e.g. Naturally Wild natwild.com.au or "Philworld Trading IA"
-		+rating-row('5','Information Architecture',"I see dead patterns (6th sense)",links.natwild+"#IA",'Naturally Wild')
+		+rating-row('5','Information Architecture',"I see dead patterns (6th sense)",links.ia,'Why I say I have a 6th sense in IA')
 		//- MUST have multiple examples, not just paper. ,'#',"This portfolio website"
 		+rating-row('3','Prototyping, lo-fi',"I confidently create")
 		//- MUST have multiple examples

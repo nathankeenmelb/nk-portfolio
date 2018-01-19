@@ -1,0 +1,57 @@
+//- CONTENT
+//- ====================================================
+.container
+	header
+		h1 Marketing creative + tech
+	+articleintro("tech",'What does marketing look like today?',"",'images/marketing/modern-marketer-infographic.jpg','','')
+		p I'd say there are about three main categories in marketing: the tech, the creative, and the writer.
+		p This is different from what Pardot and Salesforce say (image right). 
+		p What I'm saying is that it's usually a different person that can speak really well, is witty and the life of the party, to the visual designer. 
+		p So the modern marketer, in their words is "part scientist", "part artist", and "part linguist".
+		p As to me, <strong>I can fulfill the scientist and artist roles</strong>, but I'm not a great wordsmith.
+	.row.justify-content-center
+		.col-md-10.col-xl-8
+			h4 My scientific/tech marketing experience
+			p At my last NFP, I constructed a full range of stats on our email & website campaigns.
+			//-button#scrollbutton Click to scroll
+			.horizontalimage
+				+image("images/marketing/campaign-stats.png","A spreadsheet covering full statistics for a campaign including deliverability, websites, social media, and end goal statistics","Stats from just one part don't cut it! This shows full end-to-end statistics from email to website to action")
+				//-.divright
+			p The data was pulled from Sendgrid, Facebook, Google Analytics, websites and Postmark.
+			p I worked closely with our social media guru, fixing up the Facebook titles, content, and images of links shared through <code>og meta</code> tags, and force refreshing of data using the 'Sharing Debugger' tool.
+			+image("images/marketing/facebook-debugger.png","A screen grab of Facebook's sharing debugger tool in action","Analysing how Facebook will view my Peaceful UX post")(class="shadow")
+			p I could force a particular title or image despite what the CMS defaults wanted, and do this without hardcoding it (which might interfere with other pages). 
+			p Being tech support for emails (& everything!), I also have experience with:
+			ul
+				li <strong>Troubleshooting deliverability issues</strong>, by checking spam scores; reasons for bounces; SPF, DKIM and MX records
+				li <strong>Integrating email systems</strong>, such as with the CRM, or other database (not custom integrations, but utilising tools like Zapier or syncing tools)
+				li <strong>Embedding social media</strong> onto websites so the latest piece(s) are showing
+			h4#design My artistic marketing experience
+			p Email software is notorious for displaying HTML emails badly.
+			p I can't say I know every nuance of every software provider (who would?), but I can test how my email would look in 99% of them with Litmus. 
+			p I can create custom HTML email templates, or to cut costs, customise pre-made templates. 
+			p This is one that I've designed:
+			+image("images/marketing/email-template.jpg","An email template","Responsive email template")
+			p I'm familiar with templates that work well with such tools as Mailchimp, where you can tag certain sections to repeat, or be removed. This means you can easily change the look of a campaign, based on only the sections you want.
+			h4 The toolset
+			p I'm thoroughly familiar with many, many tools such as:
+			ul
+				li Litmus for <strong>testing email designs</strong>, broken links and so on
+				li Marketing <strong>Automation</strong> tools such as Autopilot & Drip
+				li Marketing campaign tools such as <strong>Mailchimp & SendGrid</strong>, and utilising more than the standard features such as Mailchimp's <strong>A/B Split Testing</strong> and <strong>segmentation</strong>
+				li Analytical tools such as <strong>Google Analytics</strong> and those within email sending software such as SendGrid, Postmark
+				li <strong>Transactional email</strong> delivery tools like Postmark
+				li Advertising tools such as <strong>Google Adwords & Facebook Ads</strong>
+				li Social media tools like <strong>Hootsuite</strong>
+				li Website <strong>live chat tools</strong> like tawk.to
+				li Web design tools to edit <strong>responsive, HTML emails</strong>
+			p I am familiar with <em>hundreds</em> of applications, so learning something new isn't a challenge. In fact, I am usually able to help someone in a program they've used for years, but I've never seen before (having worked in small organisations, I'm always the tech support). 
+//- BOTTOM NAV
+//- ====================================================
+//-nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
+//-		ul.navbar-nav
+//-			+navli('#top',"Top")
+//-			+navli('#Neg',"Neg'n")
+//-			+navli('#UX',"UX")
+//-			+navli('#Proto',"Proto")
+//-			+navli('#End',"Final")

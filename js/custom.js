@@ -5,7 +5,12 @@ jQuery(document).ready(function(){
 		var total = quantity * price * 0.01; 
 		jQuery("#total_price-ecommerce2").val(total); 
 	}); 
-
+	/*jQuery('#scrollbutton').click(function(){
+		jQuery('.horizontalimage').animate({
+			scrollLeft: jQuery('.divright').css('left')
+		},800);
+	});*/
+	jQuery("table#tshaped td:empty").addClass("empty");
 	// Medium feed, using rss to json online converter rss2json.com, via Jason Matthew https://codepen.io/jasonm4130/pen/vZYbQx
 	jQuery(function () {
 		var $content = jQuery('#jsonContent');
