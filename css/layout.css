@@ -1,10 +1,43 @@
+/* Variables */
 /* Mixins */
 /* @include box-shadow(1px,1px,20px,0, rgba(0,0,0,0.2), false); */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+/* Backgrounds */
+.bgdark {
+  background: -webkit-gradient(linear, right top, left bottom, from(#8f57a3), to(#783d97));
+  background: -webkit-linear-gradient(top right, #8f57a3, #783d97);
+  background: -o-linear-gradient(top right, #8f57a3, #783d97);
+  background: linear-gradient(to bottom left, #8f57a3, #783d97);
+  color: white; }
+  .bgdark a {
+    color: #1ab268;
+    border-color: #1ab268; }
+  .bgdark .card {
+    color: black; }
+    .bgdark .card a {
+      color: white;
+      border: none; }
+  .bgdark .figure-caption {
+    color: white; }
+
+.bglight {
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(10%, #f8dfb7), to(#1ab268));
+  background: -webkit-linear-gradient(top left, #f8dfb7 10%, #1ab268);
+  background: -o-linear-gradient(top left, #f8dfb7 10%, #1ab268);
+  background: linear-gradient(to bottom right, #f8dfb7 10%, #1ab268);
+  color: black; }
+
+.bgdark, .bglight {
+  padding-bottom: 4rem; }
+
 /* Nav settings  */
 body {
   min-height: 75rem;
-  padding-top: 4.5rem;
-  position: relative; }
+  padding-top: 3.5rem;
+  position: relative;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
 
 a {
   color: black;
@@ -37,7 +70,15 @@ section {
   margin: 0; }
 
 .card {
-  margin: 1rem 0; }
+  margin: 1rem 0;
+  border: 0;
+  padding: 1.5rem; }
+
+.card-header {
+  background-color: inherit;
+  border-bottom: none;
+  text-align: center;
+  font-weight: bold; }
 
 .vertcentre {
   -webkit-box-orient: horizontal;
@@ -49,7 +90,7 @@ section {
   align-items: center; }
 
 footer {
-  margin-top: 4rem; }
+  padding-top: 2rem; }
   footer .jumbotron {
     margin-bottom: 0;
     background-color: inherit; }
@@ -76,6 +117,7 @@ img.img-responsive {
 	margin: 2rem;
 }*/
 table#stars {
+  background-color: initial;
   max-width: 100%;
   margin: 0 auto; }
   table#stars td:nth-child(1) {
@@ -91,17 +133,7 @@ table#stars {
     white-space: nowrap; }
 
 .table-responsive {
-  /* Scrolling shadows by @kizmarh and @leaverou */
-  background-image: -webkit-gradient(linear, left top, right top, from(white), to(white)), -webkit-gradient(linear, left top, right top, from(white), to(white)), -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.25)), to(rgba(255, 255, 255, 0))), -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.25)), to(rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(left, white, white), -webkit-linear-gradient(left, white, white), -webkit-linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), -webkit-linear-gradient(right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(left, white, white), -o-linear-gradient(left, white, white), -o-linear-gradient(left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), -o-linear-gradient(right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
-  background-image: linear-gradient(to right, white, white), linear-gradient(to right, white, white), linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0)), linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0));
-  background-position: left center, right center, left center, right center;
-  background-repeat: no-repeat;
-  background-color: white;
-  background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
-  /* Opera doesn't support this in the shorthand */
-  background-attachment: local, local, scroll, scroll; }
+  /* Scrolling shadows by @kizmarh and @leaverou */ }
 
 @media (max-width: 750px) {
   table#stars td:nth-child(3) {

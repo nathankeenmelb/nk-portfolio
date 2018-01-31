@@ -1,3 +1,12 @@
+/* Variables */
+
+$pfGreen: #1ab268;
+$pfPurple: #783d97;
+$pfPurpleLight: #8f57a3;
+$pfTan: #f8dfb7;
+$font-heading: "Oswald",'Open Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$font-body: 'Open Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
 /* Mixins */
 
 @mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
@@ -14,11 +23,46 @@
 }
 /* @include box-shadow(1px,1px,20px,0, rgba(0,0,0,0.2), false); */
 
+h1,h2,h3,h4,h5,h6 {
+	font-family: $font-heading;
+}
+/* Backgrounds */
+
+.bgdark {
+	background: linear-gradient(to bottom left, $pfPurpleLight, $pfPurple);
+	color: white;
+	a {
+	color: $pfGreen;
+	border-color: $pfGreen;
+	}
+	.card {
+	color: black;
+		a {
+		color: white;
+		border: none;
+		}
+	}
+	.figure-caption {
+	color: white;
+	}
+
+}
+
+.bglight {
+	background: linear-gradient(to bottom right, $pfTan 10%, $pfGreen);
+	color: black;
+}
+
+.bgdark, .bglight {
+	padding-bottom: 4rem;
+}
+
 /* Nav settings  */
 body { //if fixed to top, move the body down
   min-height: 75rem;
-  padding-top: 4.5rem;
+  padding-top: 3.5rem;
   position: relative;
+  font-family: $font-body;
 }
 
 a {
@@ -56,14 +100,24 @@ section {
 }
 .card {
 	margin: 1rem 0;
+	border: 0;
+	padding: 1.5rem;
 }
+
+.card-header {
+    background-color: inherit;
+    border-bottom: none;
+    text-align: center;
+    font-weight: bold;
+}
+
 .vertcentre {
 	flex-direction: row;
 	align-items: center;
 }
 
 footer {
-	margin-top: 4rem;
+	padding-top: 2rem;
 	.jumbotron {
 		margin-bottom:0;
 		background-color:inherit;
@@ -96,6 +150,7 @@ img.img-responsive {
 $table-star-width: 100%;
 
 table#stars {
+	background-color: initial;
 	max-width: $table-star-width;
 	margin: 0 auto;
 	td:nth-child(1) {
@@ -120,17 +175,6 @@ table#stars {
 
 .table-responsive {
 	/* Scrolling shadows by @kizmarh and @leaverou */
-    background-image: 
-    linear-gradient(to right, white, white),
-    linear-gradient(to right, white, white),
-    linear-gradient(to right, rgba(0,0,0,.25), rgba(255,255,255,0)),
-    linear-gradient(to left, rgba(0,0,0,.25), rgba(255,255,255,0));   
-	background-position: left center, right center, left center, right center;
-	background-repeat: no-repeat;
-	background-color: white;
-	background-size: 20px 100%, 20px 100%, 10px 100%, 10px 100%;
-	/* Opera doesn't support this in the shorthand */
-	background-attachment: local, local, scroll, scroll;
 }
 
 //Hide the explanation column on smaller screens
