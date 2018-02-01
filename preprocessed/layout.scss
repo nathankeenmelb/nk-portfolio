@@ -1,11 +1,11 @@
 /* Variables */
 
-$pfGreen: #1ab268;
-$pfPurple: #783d97;
-$pfPurpleLight: #8f57a3;
-$pfTan: #f8dfb7;
-$font-heading: "Oswald",'Open Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-$font-body: 'Open Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$pfGreen: #1ab268; .green {color:$pfGreen}
+$pfPurple: #783d97; .purple {color:$pfPurple}
+$pfPurpleLight: #8f57a3; .purpleLight {color:$pfPurpleLight}
+$pfTan: #f8dfb7; .tan {color:$pfTan}
+$font-heading: "Oswald",'Open Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; .font-heading {font-family: $font-heading;}
+$font-body: 'Open Sans',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; .font-body {font-family: $font-body;}
 
 /* Mixins */
 
@@ -51,10 +51,26 @@ h1,h2,h3,h4,h5,h6 {
 .bglight {
 	background: linear-gradient(to bottom right, $pfTan 10%, $pfGreen);
 	color: black;
+	.figure-caption {
+	color: lighten(black, 30%);
+	}
+}
+
+.bgtop {
+	background: radial-gradient(circle 450px at 42% 70%, $pfTan 10%, #1ab268);
+	transition: background 1.5s ease-out;
+}
+
+.bgtop:hover, .bgtop:active {
+	background-position:200px 0px;
 }
 
 .bgdark, .bglight {
 	padding-bottom: 4rem;
+}
+
+.bglight .container {
+	padding-bottom: 2rem;
 }
 
 /* Nav settings  */
@@ -80,6 +96,8 @@ a:hover, a:active {
 nav a {
 	border-bottom: none;
 }
+
+
 
 /*
 @media (max-width: 576px) { //on mobiles, fix nav to bottom
@@ -207,6 +225,8 @@ table#tshaped {
 	margin: 0 auto;
 }
 
+
+
 //Blog posts
 .post-meta {
 	text-transform: uppercase;
@@ -217,11 +237,20 @@ table#tshaped {
 }
 
 // Timeline START
+#timeline {
+	.bglight, .bgdark {
+		padding-bottom: 0;
+	}
+	
+	.bglight .container {
+		padding-bottom: 0;
+	}
+	
+}
+
 .timeline {
     position: relative;
     padding: 21px 0px 10px;
-    margin-top: 4px;
-    margin-bottom: 30px;
 }
 
 .timeline .line {
@@ -232,7 +261,6 @@ table#tshaped {
     top: 0px;
     bottom: 0px;
     margin-left: 30px;
-	z-index: -1;
 }
 
 .timeline .separator {
@@ -248,7 +276,7 @@ table#tshaped {
 .timeline .line::before { top: -4px; }
 .timeline .line::after { bottom: -4px; }
 .timeline .line::before,
-.timeline .line::after {
+.timeline .line.last::after {
     content: '';
     position: absolute;
     left: -4px;
@@ -341,4 +369,9 @@ img.shadow {
 	height:1px;
 	position:relative;
 	left:1000px;
+}
+
+//forms and inputs
+.form-control:disabled, .form-control[readonly], .readonly {
+	background-color: darken(white, 30%);
 }

@@ -27,13 +27,12 @@ mixin rating(name)
 			.col-12
 				h3.text-center= name
 				table.table.table-responsive#stars
-					//- ====== It's very self-explanatory ======
-					//-thead
-						//-tr
-							//-th(scope="col") Skill
-							//-th(scope="col") Rating /5
-							//-th(scope="col") Meaning
-							//-th(scope="col") Example
+					thead.font-heading
+						tr
+							th(scope="col") Skill
+							th.text-center(scope="col") Rating
+							th(scope="col") Meaning
+							th(scope="col") Example
 					tbody
 						if block
 						block
@@ -47,7 +46,7 @@ mixin rating-row(num,name,meaning,url,example)
 				- for(var j = 1; j <= 5 - num; j++)	//unfilled stars
 					i.far.fa-star
 		td.align-middle
-			span.badge.badge-secondary= meaning
+			span.badge.badge-light= meaning
 		td.align-middle
 			a(href=url)= example
 mixin rating-header(name)
@@ -57,13 +56,13 @@ mixin rating-header(name)
 				em= name
 //- HOME PAGE
 //- ====================================================
-.bglight
+.bglight.bgtop
 	.container
 		.logo
 			+image('images	/logo-NK-1mdpi.png','Logo Nathan Keen')
 		header
-			h1.text-center Hi! I'm Nathan Keen;<br /> a UX/UI designer
-			p.text-center This is my portfolio
+			h1.text-center.purple Hi! I'm a web designer<br />specialising in visual design<br />& UI/UX engineering
+		//p.text-center This is my portfolio
 		//- MAIN CONTENT SECTIONS
 		//- ====================================================
 .bgdark
@@ -147,31 +146,6 @@ mixin rating-header(name)
 					#jsonContent.row
 .bgdark
 	.container
-		+articleintro("tshaped",'I have a T-Shaped skill set','','images/marketing/tshaped.png',"An I is a specialist, which is bad; a - is a generalist, which is also bad; but a T is a generalising specialist, which is good","A generalising specialist is also called a T-shaped person")
-			p Tim Brown, CEO of one of the greatest design companies in the world, IDEO, hires people who are T-shaped.
-			p I-shaped people are traditional experts, specialist in one field.
-			p T-shaped people are the best creatives, able to empathise with a wide field and apply their mastery to new fields.
-		.row.justify-content-center
-			.col-md-10.col-xl-8
-				h4 My generalist skills
-				ul
-					li Finance/ Accounting
-					li Business Management
-					li Engineering (Civil Engineering degree)
-					li Print
-					li Email/ Marketing
-					li Web Development
-					li Tech Support
-					li Project Management
-					li Psychology
-					li Conflict Resolution (2012 course)
-				p Many of these skills have come because I've run my own business and had to do everything.
-				p Other skills have come because I've often worked in small organisations.
-				p These skills help me to empathise with other members of the design process. For example, I can more easily work with finance to create effective solutions for displaying data, having a business background.
-				p <strong>Please read below for some of my general skills</strong>. Also check out a 
-					+nava(links.workxp,'timeline of my work experience.')
-.bglight
-	.container
 		+sectionhome('PM','Project Management','How can we manage timeframes?')
 			+sectionhomecard('Outsourcing','images/ux-portfolio/pm-parallel.jpg','Gantt chart showing two major pieces in parallel',"How I delivered twice the value for Red Cup Cafe in the agreed time through smart outsourcing.")
 				+button(links.redcup+"#Proto",'Read more')
@@ -192,6 +166,73 @@ mixin rating-header(name)
 			+rating-row('3','Teamwork',"I understand most of it",'#',"")
 			//- inlcude a little writeup '#',"PSA Project Management"
 			+rating-row('4','MS Project',"I've pushed it beyond its limits")
+.bglight
+	.container
+		+articleintro("tshaped",'I have a T-Shaped skill set','','images/marketing/tshaped.png',"An I is a specialist, which is bad; a - is a generalist, which is also bad; but a T is a generalising specialist, which is good","A generalising specialist is also called a T-shaped person")
+			p Tim Brown, CEO of one of the greatest design companies in the world, IDEO, hires people who are T-shaped.
+			p I-shaped people are traditional experts, specialist in one field.
+			p T-shaped people are the best creatives, able to empathise with a wide field and apply their mastery to new fields.
+		section
+			.row
+				.col-md-6
+					.card.bg-info.text-white
+						.card-body
+							h4.card-text Psychology + UX = Peaceful UX
+				.col-md-6
+					p I've combined UX, the Thomas-Kilmann Assertiveness vs Cooperativeness tool, and other Conflict Resolution principles to pioneer "Peaceful UX" 
+						+nava(links.medium,'(see articles on medium)')
+					p From hiring Filipinos, I've learned common personality indicators like Myers-Briggs & DISC personality profiles, and tools to measure IQ and EQ.
+			.row
+				.col-md-6
+					p I'm 50-50 left and right brain&mdash;part big picture and part detailed. 
+					p Who cares?
+					p Well, when a fault in a legacy website was going to cost $10-20,000 to fix, and everyone was fixated on the detail, I thought outside the box and found we could bypass that website for that part, using our other website. Inelegant, but free.
+					p When a client asks 'I want a website with these functions' (detail thinking), I draw out the big picture goals and suggest a better solution.
+				.col-md-6
+					.card.bg-success.text-white
+						.card-body
+							h4.card-text Left + Right brain = Goal oriented designer/engineer
+			.row
+				.col-md-6
+					.card.bg-info.text-white
+						.card-body
+							h4.card-text Business management + web = Tenaciously meeting time, cost and quality goals
+				.col-md-6
+					p I've learned how to outsource well so that a 50 hour isometric design can be done almost perfectly in South America (parallel to my work) for a tenth of the cost 
+						+nava(links.redcup+"#Graphic",'(see Red Cup Cafe)')
+					p I have complete freedom in how I set my business up, so I know hundreds of apps & processes that can easily collectively save a business 10-20+% productivity.
+			.row
+				.col-md-6
+					p There's the tech support: "Have you tried turning it off and on again".
+					p Then there's the web guru: "Let me Google that for you".
+					p And the self-employed are practical and just have to make something work.
+					p Combined, I'm the guy who says "There's an app for that", because it's not about perpetual inefficient fixing (IT), or just knowing how to pretend you know stuff (via Google), but it's honed, intimate knowledge of the problem, together with hundreds of possible solutions, and the creativity to pull that together to make it work, quickly. 
+				.col-md-6
+					.card.bg-success.text-white
+						.card-body
+							h4.card-text Tech support + Web + Business = Solution finder
+		
+//
+	/*	.row.justify-content-center
+			.col-md-10.col-xl-8
+				h4 My generalist skills
+				ul
+					li Finance/ Accounting
+					li Business Management
+					li Engineering (Civil Engineering degree)
+					li Print
+					li Email/ Marketing
+					li Web Development
+					li Tech Support
+					li Project Management
+					li Psychology
+					li Conflict Resolution (2012 course)
+				p Many of these skills have come because I've run my own business and had to do everything.
+				p Other skills have come because I've often worked in small organisations.
+				p These skills help me to empathise with other members of the design process. For example, I can more easily work with finance to create effective solutions for displaying data, having a business background.
+				p <strong>Please read below for some of my general skills</strong>. Also check out a 
+					+nava(links.workxp,'timeline of my work experience.')
+					*/
 		//- ============ WHEN I HAVE TIME, INCLUDE BUSINESS ================
 		//-+sectionhome('Business','How can we ensure financial success?')
 			//-+sectionhomecard('Naturally Wild','http://via.placeholder.com/350x150','Screenshot from natwild.com.au',"Built on Shopify, this is set to pay for itself in 6 months, delivering 150x the previous website!")
@@ -202,13 +243,14 @@ mixin rating-header(name)
 			//-+rating-row('2','Sketch',"I understand the basics",'#',"Infographic on Conflict Resolution")
 			//-+rating-row('4','Creativity',"I confidently ideate",'#',"Infographic on Conflict Resolution")
 			//-+rating-row('3','Typography',"I can easily copy other styles",'#',"Infographic on Conflict Resolution")
-.bgdark
-	.container
-		+sectionhome('Web','General Web','How can we empower people?')
-		+rating('Web skills')
-			+rating-row('5','WHM/cPanel',"I've done this for zonks",'#',"")
-			+rating-row('2','SQL',"I understand some of it",'#',"")
-			+rating-row('3','Github',"I understand most of it",links.github,"Check out my Github account")
+//
+	.bgdark
+		.container
+			+sectionhome('Web','General Web','How can we empower people?')
+			+rating('Web skills')
+				+rating-row('5','WHM/cPanel',"I've done this for zonks",'#',"")
+				+rating-row('2','SQL',"I understand some of it",'#',"")
+				+rating-row('3','Github',"I understand most of it",links.github,"Check out my Github account")
 //- BOTTOM NAV
 //- ====================================================
 nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
@@ -217,4 +259,5 @@ nav.navbar.navbar-expand.navbar-dark.fixed-bottom.bg-dark#navbot
 			+navli('#UI',"UI")
 			+navli('#UX',"UX")
 			+navli('#PM',"PM")
-			+navli('#Web',"Web")
+			+navli('#tshaped',"T-shape")
+			//-+navli('#Web',"Web")

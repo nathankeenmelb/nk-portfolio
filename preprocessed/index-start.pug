@@ -22,7 +22,7 @@ mixin articleintro(link, name, subtitle, href, alt, caption)
 		.row.vertcentre
 			.col-md-6
 				h2.anchor&attributes({'id': link})= name
-				p.text-muted= subtitle
+				p.font-italic= subtitle
 				if block
 					block
 			.col-md-6
@@ -54,7 +54,7 @@ mixin image-2col(src,alt,caption)
 			figcaption.figure-caption.text-center= caption
 //- VARIABLES
 //- ====================================================
-- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution",natwild:"/portfolio-NatWild2017.html",portfolio:"/portfolio-2018.html",philworld:"https://filipinofoodwholesale.com.au",workxp:"/work-experience.html",codepen:"https://codepen.io/nathankeenmelb",ia:"/portfolio-InformationArchitecture.html",marketing:"/portfolio-Marketing.html"}
+- var links = {github:"https://github.com/nathankeenmelb/",githubpf:"https://github.com/nathankeenmelb/nk-portfolio",redcup:"/portfolio-RedCupCafe2017.html",redcup2008:"https://www.behance.net/gallery/40807817/Redcup-Cafe-bespoke-web-design-build",design:"https://www.behance.net/nathankeenmelbourne",conflict:"https://www.behance.net/gallery/41117335/Infographic-Conflict-Resolution",natwild:"/portfolio-NatWild2017.html",portfolio:"/portfolio-2018.html",philworld:"https://filipinofoodwholesale.com.au",workxp:"/work-experience.html",codepen:"https://codepen.io/nathankeenmelb",ia:"/portfolio-InformationArchitecture.html",marketing:"/portfolio-Marketing.html",medium:"https://medium.com/@agapemedia/"}
 //- HTML
 //- ====================================================
 doctype html

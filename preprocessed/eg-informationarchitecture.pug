@@ -1,88 +1,91 @@
 //- CONTENT
 //- ====================================================
-.container
-	header
-		h1 Why I say I have a 6th sense in Information Architecture
-	+articleintro("email",'Emails',"Why most people can't make their inbox work for them but I can",'images/ia/email-frustration.png','A person frustrated with email sitting behind their computer; venting','Email, the bane of our time')
-		p Some people see dead people, I see dead patterns - patterns and ways of organising nobody thought existed.
-		p I've written 10,000 words already on 'How to Master Your Email Inbox'. Somebody said 'master'&mdash;that's a strong word. Yes it is. 
-		p Email:
-		ul
-			li No longer controls me
-			li Can barrage me with lots of information that I want, yet only take a few minutes in the morning and afternoon to process
-			li Is actually useful again (for those things it's good at)
-		p IA and emails&mdash;what's the connection?
-		ul
-			li If you can categorise emails, you might just sort out the overwhelm of the inbox. Like what Gmail did with auto-categories. 
-			li How to categorise is the big question.
-			li How to do this <em>in the real world</em> is yet another question. We don't live in theory world. 
-			li We should also re-think <em>what</em> emails are, and how we use them. Some uses for email are very inefficient.
-		p Ultimately, this is also about UX. We all want 'inbox zero', or at least peace about our inbox, not anxiety. We want to be in control, not be overwhelmed by it. 
-	.row.justify-content-center
-		.col-md-10.col-xl-8
-			h4 Categorisation the right way
-			p 80% of email is junk mail, and never 'has' to be processed. 
-			p 80% of non-junk is non-urgent. 
-			p Only 20% of 20% (4%) actually is important <em>and</em> urgent. Roughly. 
-			p The first categorisation, therefore, is a killer strategy becuase it literally wipes away 96% of emails. Important and urgent. 
-			p Practically, one can do that through Gmail's 'important' tag. You click 'important' on those emails that are in fact important, and you don't for junk mail. 
-			p Then, you use the multiple inbox view to visually separate the important from the junk. 
-			p You can further separate 'important' with 'important AND urgent' by adding a label, and making that another view in the multiview. 
-			p Without Gmail, you can do all your junk signups on another email address. This is pre-sorting. It really works - out of sight, out of mind. Then you need to setup labels or tags to sort further. 
-			h4 Categorisation the wrong way
-			p But most people still seem to use the folder structure (by structure I mean 100s of folders). This is unworkable because:
+.bglight
+	.container
+		header
+			h1 Why I say I have a 6th sense in Information Architecture
+		+articleintro("email",'Emails',"Why most people can't make their inbox work for them but I can",'images/ia/email-frustration.png','A person frustrated with email sitting behind their computer; venting','Email, the bane of our time')
+			p Some people see dead people, I see dead patterns - patterns and ways of organising nobody thought existed.
+			p I've written 10,000 words already on 'How to Master Your Email Inbox'. Somebody said 'master'&mdash;that's a strong word. Yes it is. 
+			p Email:
 			ul
-				li It takes too long to categorise the emails
-				li Due to this difficulty, emails pile up in a 'to-sort' pile, further reducing the effectiveness of the entire method
-				li Many emails could fit into multiple folders, so retrieval is difficult because a clear place is not apparent
-				li Emails to respond to are often left 'unread', but since there's no differentiation between important and 'whenever', the task list grows exponentially. 
-			p Therefore, categorisation should be simple if not automatic. 
-			p When you combine simple categorisation with better search, like most email programs today, you can get much closer to the stage where you are only checking emails 2-3 times a day for about 15 minutes each time (apart from those intentional times when you specifically look through junk mail).
-			h4 Email is ONE category of communication
-			p Email is still so much like sending a letter. It's a one-way communication. We send it and then make a coffee or switch to another task. We don't wait, like we do for instant chat. 
-			p Instant chat is two-way communications. We largely expect to be able to have a constant chat&mdash;and we can. That's why Slack was billed the 'email killer'. 
-			p It goes back to what applications are made for. Email is ONE way communications. Slack is TWO way. Neither are great for task or project management, but we still use them for that.
-			p Project management is best done in purpose built apps because you have the <em>context</em> of the tasks around them. And in something like Asana, you only get notified of the tasks/projects you actually care about. With email, you're cc'ed into <em>everything</em>.
-			p If a business used two-way communication tools for two-way communications, project management tools for project management, and so on, they'd be much more efficient. Sounds easy but it's not done well in practice. 
-			p So, the purpose of an app is an important categorisation.
-			h4 For more, ask me!
-	+articleintro("evernote",'Evernote',"Why most people can't find their notes but I can",'.jpg','','')
-		p Everyone starts the note-building exercise with ease and comfort. Evernote have made it that way.
-		p But after a while, you find you might, like me, have 5,293 notes and you can't find anything. You KNOW you've written about it, but it's buried&mdash;a needle in a haystack.
-		p This is why some systems fail. They simply don't have a good understanding of information architecture. 
-		p I'm going to show you why the classic folder structure fails, AND the newer tags structure fails&mdash;and a better way forward.
-	.row.justify-content-center
-		.col-md-10.col-xl-8
-			h4 Folder structures are often bad
-			p Folder structures are often bad because like the email example I gave above shows, the system breaks down for several good reasons.
-			ol
-				li There can be too many folders making placement of information and retrieval confusing.
-				li There can be not enough folders making sifting through them difficult. 
-				li Information can often be put into multiple folders but the system doesn't allow that. 
-				li You remember the place where you made the information but not the time - and the folder structure was in date format Eg 01 Jan, 02 Feb, and so on. So retrieval is difficult because not enough context or metadata was stored. 
-			p I can see that allowing information to be in multiple places reduces most of these problems. But tags doesn't solve that necessarily. 
-			h4 Tag structures are often bad
-			p Why not allow information to be tagged then, following the users mental model of real tags? This way you can have information in multiple 'places', as it were, overcoming the limitation of folders. 
-			p Typically, tags are added to a folder structure to get the best of both worlds. 
-			p But in Evernote, both folders and tags have severe limitations that makes the retrieval of information a frustrating experience. 
-			p I have over 5,000 notes so I experience this all the time.
-			p Firstly, their search insists on searching while I type my search query, rather than when I'm actually ready and press enter - like Google. This elongates the search phase from 2-5 seconds to 10-30 seconds, depending on how long my query is. 
-			p Secondly, tags don't have structure. I've had to add prefixes to add structure to them, such as an '@' for location tags (the auto captured data is incoherent). This auto-groups all location tags so when I can remember where I was when I captured some data, I can easily find that tag. 
-			p However, for other tags, like a large subject with multiple sub-topics, it's not easy to setup. You can go back and change tags, with "topic: sub-topic" as the tag name, but who would do that? You can put tags under other tags to create subtags, but apart from the tag view, this is the only way to do that and use them. It would be more helpful to use when searching and creating tags, too - like in Gmail where you can create a new tag and immediately place it underneath an existing tag. 
-			p Third, tags don't really help that much because when you search you can't easily add a tag. You have to, in practice, either go to the tags section and select one tag - not multiple - or go to Google and look up how to write into the search the special code for a tag,  perhaps <code>tag:@home</code>. But who would have time for that that? 
-			p Ideally, you'd have your search and you'd be able to drop and drag in tags or click 'add a tag' and while you type a drop down would appear auto-suggesting tags. And, of course, none of it would freeze for 10 seconds while you were still typing the search query, 'helpfully' doing a search before you press enter. 
-			h4 Brain structure should be the future
-			+image('images/ia/brain-structure.jpg',"A conceptual drawing of a brain with links between everything","Neurons link to up to 10,000 other neurons")
-			p What a brain does to store information is more like an interconnected web such as a mind map with multiple central nodes. The more connections the better you'll remember it. So one folder for one thing is ripe for collecting digital dust. One tag for one thing is even more so vulnerable because tags are often not immediately visible. 
-			p What you want, with only a dash of idealism, is:
+				li No longer controls me
+				li Can barrage me with lots of information that I want, yet only take a few minutes in the morning and afternoon to process
+				li Is actually useful again (for those things it's good at)
+			p IA and emails&mdash;what's the connection?
 			ul
-				li Information to be added as easily as it can be in Evernote, but with better automation and ease of tagging. Perhaps the tagging could be smart enough to be pre-sorted into contexts (who why where what when), to match how we remember things. It could auto-suggest additions based on similar items. 
-				li Unlimited sub-notebooks (folders) - sometimes that is really helpful and that's what you remember. In fact, there may be little difference between tags and notebooks if you allow nesting of tags or notes that can go in multiple notebooks. So, one or the other, so as to reduce confusion. 
-				li Search with the power of filtering by those tags, all easily accessible and not hidden with "shortcut" codes buried in documentation. 
-			p Moving away from folders can be good (might not be necessary for small numbers of things), but the simple addition of tags doesn't fix everything (or perhaps anything, if you're careless).
-			h5 I did not Google for <em>any</em> of this information, or learn IA at uni or a course! That's why I say I have a 6th sense in IA.
-			p See how I worked within the limitations of Shopify's poor IA 
-				+nava(links.natwild+"#IA","with Naturally Wild's shop") 
+				li If you can categorise emails, you might just sort out the overwhelm of the inbox. Like what Gmail did with auto-categories. 
+				li How to categorise is the big question.
+				li How to do this <em>in the real world</em> is yet another question. We don't live in theory world. 
+				li We should also re-think <em>what</em> emails are, and how we use them. Some uses for email are very inefficient.
+			p Ultimately, this is also about UX. We all want 'inbox zero', or at least peace about our inbox, not anxiety. We want to be in control, not be overwhelmed by it. 
+		.row.justify-content-center
+			.col-md-10.col-xl-8
+				h4 Categorisation the right way
+				p 80% of email is junk mail, and never 'has' to be processed. 
+				p 80% of non-junk is non-urgent. 
+				p Only 20% of 20% (4%) actually is important <em>and</em> urgent. Roughly. 
+				p The first categorisation, therefore, is a killer strategy becuase it literally wipes away 96% of emails. Important and urgent. 
+				p Practically, one can do that through Gmail's 'important' tag. You click 'important' on those emails that are in fact important, and you don't for junk mail. 
+				p Then, you use the multiple inbox view to visually separate the important from the junk. 
+				p You can further separate 'important' with 'important AND urgent' by adding a label, and making that another view in the multiview. 
+				p Without Gmail, you can do all your junk signups on another email address. This is pre-sorting. It really works - out of sight, out of mind. Then you need to setup labels or tags to sort further. 
+				h4 Categorisation the wrong way
+				p But most people still seem to use the folder structure (by structure I mean 100s of folders). This is unworkable because:
+				ul
+					li It takes too long to categorise the emails
+					li Due to this difficulty, emails pile up in a 'to-sort' pile, further reducing the effectiveness of the entire method
+					li Many emails could fit into multiple folders, so retrieval is difficult because a clear place is not apparent
+					li Emails to respond to are often left 'unread', but since there's no differentiation between important and 'whenever', the task list grows exponentially. 
+				p Therefore, categorisation should be simple if not automatic. 
+				p When you combine simple categorisation with better search, like most email programs today, you can get much closer to the stage where you are only checking emails 2-3 times a day for about 15 minutes each time (apart from those intentional times when you specifically look through junk mail).
+				h4 Email is ONE category of communication
+				p Email is still so much like sending a letter. It's a one-way communication. We send it and then make a coffee or switch to another task. We don't wait, like we do for instant chat. 
+				p Instant chat is two-way communications. We largely expect to be able to have a constant chat&mdash;and we can. That's why Slack was billed the 'email killer'. 
+				p It goes back to what applications are made for. Email is ONE way communications. Slack is TWO way. Neither are great for task or project management, but we still use them for that.
+				p Project management is best done in purpose built apps because you have the <em>context</em> of the tasks around them. And in something like Asana, you only get notified of the tasks/projects you actually care about. With email, you're cc'ed into <em>everything</em>.
+				p If a business used two-way communication tools for two-way communications, project management tools for project management, and so on, they'd be much more efficient. Sounds easy but it's not done well in practice. 
+				p So, the purpose of an app is an important categorisation.
+				h4 For more, ask me!
+.bgdark
+	.container
+		+articleintro("evernote",'Evernote',"Why most people can't find their notes but I can",'images/ia/evernote.png','Folders vs Tags','Evernote makes their folders AND tags fail')
+			p Everyone starts the note-building exercise with ease and comfort. Evernote have made it that way.
+			p But after a while, you find you might, like me, have 5,293 notes and you can't find anything. You KNOW you've written about it, but it's buried&mdash;a needle in a haystack.
+			p This is why some systems fail. They simply don't have a good understanding of information architecture. 
+			p I'm going to show you why the classic folder structure fails, AND the newer tags structure fails&mdash;and a better way forward.
+		.row.justify-content-center
+			.col-md-10.col-xl-8
+				h4 Folder structures are often bad
+				p Folder structures are often bad because like the email example I gave above shows, the system breaks down for several good reasons.
+				ol
+					li There can be too many folders making placement of information and retrieval confusing.
+					li There can be not enough folders making sifting through them difficult. 
+					li Information can often be put into multiple folders but the system doesn't allow that. 
+					li You remember the place where you made the information but not the time - and the folder structure was in date format Eg 01 Jan, 02 Feb, and so on. So retrieval is difficult because not enough context or metadata was stored. 
+				p I can see that allowing information to be in multiple places reduces most of these problems. But tags doesn't solve that necessarily. 
+				h4 Tag structures are often bad
+				p Why not allow information to be tagged then, following the users mental model of real tags? This way you can have information in multiple 'places', as it were, overcoming the limitation of folders. 
+				p Typically, tags are added to a folder structure to get the best of both worlds. 
+				p But in Evernote, both folders and tags have severe limitations that makes the retrieval of information a frustrating experience. 
+				p I have over 5,000 notes so I experience this all the time.
+				p Firstly, their search insists on searching while I type my search query, rather than when I'm actually ready and press enter - like Google. This elongates the search phase from 2-5 seconds to 10-30 seconds, depending on how long my query is. 
+				p Secondly, tags don't have structure. I've had to add prefixes to add structure to them, such as an '@' for location tags (the auto captured data is incoherent). This auto-groups all location tags so when I can remember where I was when I captured some data, I can easily find that tag. 
+				p However, for other tags, like a large subject with multiple sub-topics, it's not easy to setup. You can go back and change tags, with "topic: sub-topic" as the tag name, but who would do that? You can put tags under other tags to create subtags, but apart from the tag view, this is the only way to do that and use them. It would be more helpful to use when searching and creating tags, too - like in Gmail where you can create a new tag and immediately place it underneath an existing tag. 
+				p Third, tags don't really help that much because when you search you can't easily add a tag. You have to, in practice, either go to the tags section and select one tag - not multiple - or go to Google and look up how to write into the search the special code for a tag,  perhaps <code>tag:@home</code>. But who would have time for that that? 
+				p Ideally, you'd have your search and you'd be able to drop and drag in tags or click 'add a tag' and while you type a drop down would appear auto-suggesting tags. And, of course, none of it would freeze for 10 seconds while you were still typing the search query, 'helpfully' doing a search before you press enter. 
+				h4 Brain structure should be the future
+				+image('images/ia/brain-structure.jpg',"A conceptual drawing of a brain with links between everything","Neurons link to up to 10,000 other neurons")
+				p What a brain does to store information is more like an interconnected web such as a mind map with multiple central nodes. The more connections the better you'll remember it. So one folder for one thing is ripe for collecting digital dust. One tag for one thing is even more so vulnerable because tags are often not immediately visible. 
+				p What you want, with only a dash of idealism, is:
+				ul
+					li Information to be added as easily as it can be in Evernote, but with better automation and ease of tagging. Perhaps the tagging could be smart enough to be pre-sorted into contexts (who why where what when), to match how we remember things. It could auto-suggest additions based on similar items. 
+					li Unlimited sub-notebooks (folders) - sometimes that is really helpful and that's what you remember. In fact, there may be little difference between tags and notebooks if you allow nesting of tags or notes that can go in multiple notebooks. So, one or the other, so as to reduce confusion. 
+					li Search with the power of filtering by those tags, all easily accessible and not hidden with "shortcut" codes buried in documentation. 
+				p Moving away from folders can be good (might not be necessary for small numbers of things), but the simple addition of tags doesn't fix everything (or perhaps anything, if you're careless).
+				h5 I did not Google for <em>any</em> of this information, or learn IA at uni or a course! That's why I say I have a 6th sense in IA.
+				p See how I worked within the limitations of Shopify's poor IA 
+					+nava(links.natwild+"#IA","with Naturally Wild's shop") 
 
 //- BOTTOM NAV
 //- ====================================================
